@@ -1,0 +1,435 @@
+[
+    {
+        "id": 12329600,
+        "title": "Training",
+        "start": "2022-09-05T17:55:00Z",
+        "end": "2022-09-06T20:00:00Z",
+        "url": "/training/view?id=12329600",
+        "color": "#44AD34"
+    },
+    {
+        "id": 12899706,
+        "title": "Training+ Fototermin vorher",
+        "start": "2022-09-12T17:50:00Z",
+        "end": "2022-09-13T20:00:00Z",
+        "url": "/training/view?id=12899706",
+        "color": "#44AD34"
+    },
+    {
+        "id": 12899707,
+        "title": "Training",
+        "start": "2022-09-19T18:25:00Z",
+        "end": "2022-09-20T20:00:00Z",
+        "url": "/training/view?id=12899707",
+        "color": "#44AD34"
+    },
+    {
+        "id": 54026552,
+        "title": "Training",
+        "start": "2022-09-02T17:55:00Z",
+        "end": "2022-09-03T20:00:00Z",
+        "url": "/training/view?id=54026552",
+        "color": "#44AD34"
+    },
+    {
+        "id": 654026553,
+        "title": "Training",
+        "start": "2022-09-09T17:55:00Z",
+        "end": "2022-09-10T20:00:00Z",
+        "url": "/training/view?id=654026553",
+        "color": "#44AD34"
+    },
+    {
+        "id": 54026552,
+        "title": "Training",
+        "start": "2022-09-16T18:40:00Z",
+        "end": "2022-09-17T20:30:00Z",
+        "url": "/training/view?id=54026552",
+        "color": "#44AD34"
+    },
+    {
+        "id": 65426555,
+        "title": "Training",
+        "start": "2022-09-23T18:55:00Z",
+        "end": "2022-09-24T20:30:00Z",
+        "url": "/training/view?id=65426555",
+        "color": "#44AD34"
+    },
+    {
+        "id": 65426556,
+        "title": "Training",
+        "start": "2022-09-30T18:55:00Z",
+        "end": "2022-10-01T20:30:00Z",
+        "url": "/training/view?id=65426556",
+        "color": "#44AD34"
+    },
+    {
+        "id": 5440992,
+        "title": "Gegner W",
+        "start": "2022-04-27T16:50:00Z",
+        "end": "2022-04-28T18:30:00Z",
+        "url": "/game/view?id=5440992",
+        "color": "#34692D"
+    },
+    {
+        "id": 5603407,
+        "title": "Gegner A",
+        "start": "2022-07-11T18:10:00Z",
+        "end": "2022-07-12T20:00:00Z",
+        "url": "/game/view?id=5603407",
+        "color": "#34692D"
+    },
+    {
+        "id": 1049518,
+        "title": "Training + Spiel",
+        "start": "2022-04-24T11:55:00Z",
+        "end": "2022-04-25T15:30:00Z",
+        "url": "/event/view?id=1049518",
+        "color": "#34692D"
+    },
+    {
+        "id": 1065779,
+        "title": "Meisterfeier",
+        "start": "2022-05-25T18:00:00Z",
+        "end": "2022-05-26T23:59:59Z",
+        "url": "/event/view?id=1065779",
+        "color": "#34692D"
+    },
+    {
+        "id": 679238,
+        "title": "Quali",
+        "start": "2022-04-30T10:00:00Z",
+        "end": "2022-05-01T17:00:00Z",
+        "url": "/tournament/view?id=679238",
+        "color": "#34692D"
+    },
+    {
+        "id": 710393,
+        "title": "Turnier",
+        "start": "2022-07-09T12:45:00Z",
+        "end": "2022-07-10T23:59:59Z",
+        "url": "/tournament/view?id=710393",
+        "color": "#34692D"
+    },
+    {
+        "id": 1233863,
+        "title": "Jonas Heiler",
+        "allDay": true,
+        "start": "2021-05-01T00:00:00Z",
+        "end": "2021-05-01T23:00:00Z",
+        "url": "/user/view?id=1233863",
+        "className": "fc-event-birthday",
+        "color": "transparent",
+        "textColor": "black"
+    },
+    {
+        "id": 1233863,
+        "title": "Jonas Heiler",
+        "allDay": true,
+        "start": "2022-05-01T00:00:00Z",
+        "end": "2022-05-01T23:00:00Z",
+        "url": "/user/view?id=1233863",
+        "className": "fc-event-birthday",
+        "color": "transparent",
+        "textColor": "black"
+    },
+    {
+        "id": 1233863,
+        "title": "Jonas Heiler",
+        "allDay": true,
+        "start": "2023-05-01T00:00:00Z",
+        "end": "2023-05-01T23:00:00Z",
+        "url": "/user/view?id=1233863",
+        "className": "fc-event-birthday",
+        "color": "transparent",
+        "textColor": "black"
+    },
+    {
+        "id": 772008,
+        "title": "Linus Lapis",
+        "allDay": true,
+        "start": "2021-01-18T00:00:00Z",
+        "end": "2021-01-18T23:00:00Z",
+        "url": "/user/view?id=772008",
+        "className": "fc-event-birthday",
+        "color": "transparent",
+        "textColor": "black"
+    },
+    {
+        "id": 772008,
+        "title": "Linus Lapis",
+        "allDay": true,
+        "start": "2022-01-18T00:00:00Z",
+        "end": "2022-01-18T23:00:00Z",
+        "url": "/user/view?id=772008",
+        "className": "fc-event-birthday",
+        "color": "transparent",
+        "textColor": "black"
+    },
+    {
+        "id": 772008,
+        "title": "Linus Lapis",
+        "allDay": true,
+        "start": "2023-01-18T00:00:00Z",
+        "end": "2023-01-18T23:00:00Z",
+        "url": "/user/view?id=772008",
+        "className": "fc-event-birthday",
+        "color": "transparent",
+        "textColor": "black"
+    },
+    {
+        "id": 20087,
+        "title": "Nils Emmerich",
+        "allDay": true,
+        "start": "2021-12-26T00:00:00Z",
+        "end": "2021-12-26T23:00:00Z",
+        "url": "/user/view?id=20087",
+        "className": "fc-event-birthday",
+        "color": "transparent",
+        "textColor": "black"
+    },
+    {
+        "id": 20087,
+        "title": "Nils Emmerich",
+        "allDay": true,
+        "start": "2022-12-26T00:00:00Z",
+        "end": "2022-12-26T23:00:00Z",
+        "url": "/user/view?id=20087",
+        "className": "fc-event-birthday",
+        "color": "transparent",
+        "textColor": "black"
+    },
+    {
+        "id": 20087,
+        "title": "Nils Emmerich",
+        "allDay": true,
+        "start": "2023-12-26T00:00:00Z",
+        "end": "2023-12-26T23:00:00Z",
+        "url": "/user/view?id=20087",
+        "className": "fc-event-birthday",
+        "color": "transparent",
+        "textColor": "black"
+    },
+    {
+        "id": "absence.12345",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-04-08T00:00:00Z"
+    },
+    {
+        "id": "absence.12345",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-04-15T00:00:00Z"
+    },
+    {
+        "id": "absence.12345",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-04-22T00:00:00Z"
+    },
+    {
+        "id": "absence.12345",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-04-29T00:00:00Z"
+    },
+    {
+        "id": "absence.12345",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-05-06T00:00:00Z"
+    },
+    {
+        "id": "absence.12345",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-05-13T00:00:00Z"
+    },
+    {
+        "id": "absence.12345",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-05-20T00:00:00Z"
+    },
+    {
+        "id": "absence.12345",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-05-27T00:00:00Z"
+    },
+    {
+        "id": "absence.12345",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-06-03T00:00:00Z"
+    },
+    {
+        "id": "absence.12345",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-06-10T00:00:00Z"
+    },
+    {
+        "id": "absence.12345",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-06-17T00:00:00Z"
+    },
+    {
+        "id": "absence.12345",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-06-24T00:00:00Z"
+    },
+    {
+        "id": "absence.12345",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-07-01T00:00:00Z"
+    },
+    {
+        "id": "absence.6789",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-04-07T00:00:00Z"
+    },
+    {
+        "id": "absence.6789",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-04-14T00:00:00Z"
+    },
+    {
+        "id": "absence.6789",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-04-21T00:00:00Z"
+    },
+    {
+        "id": "absence.6789",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-04-28T00:00:00Z"
+    },
+    {
+        "id": "absence.6789",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-05-05T00:00:00Z"
+    },
+    {
+        "id": "absence.6789",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-05-12T00:00:00Z"
+    },
+    {
+        "id": "absence.6789",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-05-19T00:00:00Z"
+    },
+    {
+        "id": "absence.6789",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-05-26T00:00:00Z"
+    },
+    {
+        "id": "absence.6789",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-06-02T00:00:00Z"
+    },
+    {
+        "id": "absence.6789",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-06-09T00:00:00Z"
+    },
+    {
+        "id": "absence.6789",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-06-16T00:00:00Z"
+    },
+    {
+        "id": "absence.6789",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-06-23T00:00:00Z"
+    },
+    {
+        "id": "absence.6789",
+        "title": "Abwesend",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-06-30T00:00:00Z"
+    },
+    {
+        "id": "absence.9852",
+        "title": "Urlaub/Krank",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-04-14T00:00:00Z",
+        "end": "2022-05-22T23:59:59Z"
+    },
+    {
+        "id": "absence.1254",
+        "title": "Urlaub",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-05-26T00:00:00Z",
+        "end": "2022-05-29T23:59:59Z"
+    },
+    {
+        "id": "absence.823",
+        "title": "Sonstige",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-06-03T00:00:00Z",
+        "end": "2022-06-06T23:59:59Z"
+    },
+    {
+        "id": "absence.34541",
+        "title": "Urlaub",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-06-23T00:00:00Z",
+        "end": "2022-06-26T23:59:59Z"
+    },
+    {
+        "id": "absence.98520",
+        "title": "Urlaub",
+        "color": "#000000",
+        "allDay": true,
+        "start": "2022-06-30T00:00:00Z",
+        "end": "2022-07-03T23:59:59Z"
+    }
+]
