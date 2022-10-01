@@ -1,44 +1,13 @@
 from datetime import datetime
 from pathlib import Path
 
-from spielerplus_calendar import appointment, rendering
+from spielerplus_calendar import rendering
+
+from tests import fixtures
 
 
 def test_to_calendar():
-    appointments = [
-        appointment.Appointment(
-            id=65426556,
-            title="Training",
-            start=datetime(2022, 9, 30, 18, 55, 00),
-            end=datetime(2022, 9, 30, 20, 30, 00),
-            url="/training/view?id=65426556",
-            color="#44AD34",
-        ),
-        appointment.Appointment(
-            id=5603407,
-            title="Gegner A",
-            start=datetime(2022, 7, 11, 18, 10, 00),
-            end=datetime(2022, 7, 11, 20, 00, 00),
-            url="/game/view?id=5603407",
-            color="#34692D",
-        ),
-        appointment.Appointment(
-            id=1049518,
-            title="Training + Spiel",
-            start=datetime(2022, 4, 24, 11, 55, 00),
-            end=datetime(2022, 4, 24, 15, 30, 00),
-            url="/event/view?id=1049518",
-            color="#34692D",
-        ),
-        appointment.Appointment(
-            id=710393,
-            title="Turnier",
-            start=datetime(2022, 7, 9, 12, 45, 00),
-            end=datetime(2022, 7, 9, 23, 59, 59),
-            url="/tournament/view?id=710393",
-            color="#34692D",
-        ),
-    ]
+    appointments = fixtures.appointments()
 
     timestamp = datetime(2022, 9, 29, 4, 7, 57)
     cal = rendering.to_icalendar(appointments, "HSG Blau-Weiß 22/23", timestamp)
@@ -50,14 +19,7 @@ def test_to_calendar():
 
 
 def test_to_calendar_event():
-    app = appointment.Appointment(
-        id=12345,
-        title="Training",
-        start=datetime(2022, 9, 16, 18, 40),
-        end=datetime(2022, 9, 16, 20, 30),
-        url="/training/view?id=12345",
-        color="#44AD34",
-    )
+    app = fixtures.practice()
     timestamp = datetime.now()
 
     target = (
