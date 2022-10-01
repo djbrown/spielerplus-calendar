@@ -14,7 +14,3 @@ def parse_event_calendar(html: str) -> list:
 
 def parse_timestamp(timestamp: str) -> datetime:
     return datetime.fromisoformat(timestamp[:-1])  # stip trailing Z
-
-
-def parse_event_list(html: str):
-    pass
