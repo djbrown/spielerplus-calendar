@@ -6,37 +6,37 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-    - name: Check out Code
-      uses: actions/checkout@v3
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
-    - name: Set up poetry Installation Cache
-      uses: actions/cache@v3
-      with:
-        path: ~/.local
-        key: poetry
-    - name: Install poetry
-      uses: snok/install-poetry@v1
-      with:
-        virtualenvs-in-project: true
-    - name: Set up Dependency Cache
-      id: cache-deps
-      uses: actions/cache@v3
-      with:
-        path: .venv
-        key: pydeps-${{ hashFiles('**/poetry.lock') }}
-    - name: Install dependencies
-      run: poetry install --no-interaction --no-root
-      if: steps.cache-deps.outputs.cache-hit != 'true'
-    - name: Install Project
-      run: poetry install --no-interaction
-    - name: Run Unit Tests
-      run: poetry run pytest
-    - name: Check Code Formatting
-      run: poetry run black --diff --check $(git ls-files '*.py')
-    - name: Analyse Code Quality
-      run: poetry run pylint $(git ls-files '*.py')
-    - name: Check Typing
-      run: poetry run mypy $(git ls-files '*.py')
+      - name: Check out Code
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      - name: Set up poetry Installation Cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.local
+          key: poetry
+      - name: Install poetry
+        uses: snok/install-poetry@v1
+        with:
+          virtualenvs-in-project: true
+      - name: Set up Dependency Cache
+        id: cache-deps
+        uses: actions/cache@v3
+        with:
+          path: .venv
+          key: pydeps-${{ hashFiles('**/poetry.lock') }}
+      - name: Install dependencies
+        run: poetry install --no-interaction --no-root
+        if: steps.cache-deps.outputs.cache-hit != 'true'
+      - name: Install Project
+        run: poetry install --no-interaction
+      - name: Run Unit Tests
+        run: poetry run pytest
+      - name: Check Code Formatting
+        run: poetry run black --diff --check $(git ls-files '*.py')
+      - name: Analyse Code Quality
+        run: poetry run pylint $(git ls-files '*.py')
+      - name: Check Typing
+        run: poetry run mypy $(git ls-files '*.py')
