@@ -34,6 +34,8 @@ jobs:
       run: poetry install --no-interaction
     - name: Run Unit Tests
       run: poetry run pytest
+    - name: Check Code Formatting
+      run: poetry run black --diff --check $(git ls-files '*.py')
     - name: Analyse Code Quality
       run: poetry run pylint $(git ls-files '*.py')
     - name: Check Typing
