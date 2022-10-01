@@ -9,7 +9,7 @@ def create_ics(server: str, identity: str, team_name) -> str:
     filtered = appointment.filter_items(items)
     appointments = [appointment.to_appointment(item) for item in filtered]
     calendar = rendering.to_icalendar(appointments, team_name)
-    return calendar.to_ical()
+    return calendar.to_ical().decode("utf-8")
 
 
 def main():
