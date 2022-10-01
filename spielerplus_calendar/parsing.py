@@ -8,7 +8,10 @@ def parse_event_calendar(html: str) -> list:
         r'^        },"locale":"de","firstDay":1,"events":(\[.*\]),'
         r'"allDayDefault":true,"eventRender":    \(function\(event, element\) {$'
     )
-    data = re.search(pattern, html, re.MULTILINE).group(1)
+    result: re.Match[str] | None = re.search(pattern, html, re.MULTILINE)
+    if result is None:
+        raise Exception("Could not parse event from calendar")
+    data = result.group(1)
     return json.loads(data)
 
 
