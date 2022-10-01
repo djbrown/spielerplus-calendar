@@ -50,7 +50,7 @@ def test_to_calendar():
 
 
 def test_to_calendar_event():
-    appointment = appointment.Appointment(
+    a = appointment.Appointment(
         id=12345,
         title="Training",
         start=datetime(2022, 9, 16, 18, 40),
@@ -70,6 +70,6 @@ def test_to_calendar_event():
         "END:VEVENT\r\n"
     )
 
-    actual = rendering.to_icalendar_event(appointment, timestamp).to_ical().decode()
+    actual = rendering.to_icalendar_event(a, timestamp).to_ical().decode()
 
     assert actual == target
