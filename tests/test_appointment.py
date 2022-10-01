@@ -6,13 +6,9 @@ from tests import fixtures
 
 
 def test_filter_items():
-    items = json.loads(
-        Path("tests/data/event-calendar-items.json").read_text(encoding="utf-8")
-    )
+    items = json.loads(Path("tests/data/event-calendar-items.json").read_text("utf-8"))
     target = json.loads(
-        Path("tests/data/event-calendar-items-filtered.json").read_text(
-            encoding="utf-8"
-        )
+        Path("tests/data/event-calendar-items-filtered.json").read_text("utf-8")
     )
 
     actual = appointment.filter_items(items)
@@ -22,9 +18,7 @@ def test_filter_items():
 
 def test_map_items():
     items = json.loads(
-        Path("tests/data/event-calendar-items-filtered.json").read_text(
-            encoding="utf-8"
-        )
+        Path("tests/data/event-calendar-items-filtered.json").read_text("utf-8")
     )
     target = fixtures.filtered_appointments()
 

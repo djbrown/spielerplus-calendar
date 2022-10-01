@@ -13,7 +13,7 @@ def test_to_calendar():
     cal = rendering.to_icalendar(appointments, "HSG Blau-Weiß 22/23", timestamp)
     actual = cal.to_ical().decode().replace("\r\n", "\n")
 
-    target = Path("tests/data/event-calendar.ics").read_text(encoding="utf-8")
+    target = Path("tests/data/event-calendar.ics").read_text("utf-8")
 
     assert actual == target
 
