@@ -35,6 +35,6 @@ jobs:
     - name: Run Unit Tests
       run: poetry run pytest
     - name: Analyse Code Quality
-      run: poetry run pylint spielerplus-calendar tests
+      run: poetry run pylint $(git ls-files '*.py')
     - name: Check Typing
-      run: poetry run mypy .
+      run: poetry run mypy $(git ls-files '*.py')
