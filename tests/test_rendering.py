@@ -1,12 +1,12 @@
 from datetime import datetime
 from pathlib import Path
 
-from spielerplus_calendar import logic, rendering
+from spielerplus_calendar import appointment, rendering
 
 
 def test_to_calendar():
     appointments = [
-        logic.Appointment(
+        appointment.Appointment(
             id=65426556,
             title="Training",
             start=datetime(2022, 9, 30, 18, 55, 00),
@@ -14,7 +14,7 @@ def test_to_calendar():
             url="/training/view?id=65426556",
             color="#44AD34",
         ),
-        logic.Appointment(
+        appointment.Appointment(
             id=5603407,
             title="Gegner A",
             start=datetime(2022, 7, 11, 18, 10, 00),
@@ -22,7 +22,7 @@ def test_to_calendar():
             url="/game/view?id=5603407",
             color="#34692D",
         ),
-        logic.Appointment(
+        appointment.Appointment(
             id=1049518,
             title="Training + Spiel",
             start=datetime(2022, 4, 24, 11, 55, 00),
@@ -30,7 +30,7 @@ def test_to_calendar():
             url="/event/view?id=1049518",
             color="#34692D",
         ),
-        logic.Appointment(
+        appointment.Appointment(
             id=710393,
             title="Turnier",
             start=datetime(2022, 7, 9, 12, 45, 00),
@@ -50,15 +50,14 @@ def test_to_calendar():
 
 
 def test_to_calendar_event():
-    item = {
-        "id": 12345,
-        "title": "Training",
-        "start": datetime(2022, 9, 16, 18, 40),
-        "end": datetime(2022, 9, 16, 20, 30),
-        "url": "/training/view?id=12345",
-        "color": "#44AD34",
-    }
-
+    appointment = appointment.Appointment(
+        id=12345,
+        title="Training",
+        start=datetime(2022, 9, 16, 18, 40),
+        end=datetime(2022, 9, 16, 20, 30),
+        url="/training/view?id=12345",
+        color="#44AD34",
+    )
     timestamp = datetime.now()
 
     target = (
@@ -71,6 +70,6 @@ def test_to_calendar_event():
         "END:VEVENT\r\n"
     )
 
-    actual = rendering.to_icalendar_event(item, timestamp).to_ical().decode()
+    actual = rendering.to_icalendar_event(appointment, timestamp).to_ical().decode()
 
     assert actual == target

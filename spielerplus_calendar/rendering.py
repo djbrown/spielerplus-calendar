@@ -2,7 +2,7 @@ from datetime import datetime
 
 from icalendar import Calendar, Event
 
-from spielerplus_calendar.logic import Appointment
+from spielerplus_calendar.appointment import Appointment
 
 
 def to_icalendar(
