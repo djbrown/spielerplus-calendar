@@ -10,6 +10,6 @@ def test_filter_items():
         team_name="HSG Blau-Weiß 22/23",
     )
 
-    actual = config.read_config("tests/data/config.json")
+    actual = config.from_file("tests/data/config.json")
 
     assert actual == target
