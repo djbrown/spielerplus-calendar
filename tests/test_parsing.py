@@ -6,8 +6,10 @@ from spielerplus_calendar import parsing
 
 
 def test_parse_event_calendar():
-    html = Path("tests/data/event-calendar.html").read_text()
-    target = json.loads(Path("tests/data/event-calendar-items.json").read_text())
+    html = Path("tests/data/event-calendar.html").read_text(encoding="utf-8")
+    target = json.loads(
+        Path("tests/data/event-calendar-items.json").read_text(encoding="utf-8")
+    )
 
     actual = parsing.parse_event_calendar(html)
 

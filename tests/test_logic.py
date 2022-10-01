@@ -6,9 +6,13 @@ from spielerplus_calendar import logic
 
 
 def test_filter_items():
-    items = json.loads(Path("tests/data/event-calendar-items.json").read_text())
+    items = json.loads(
+        Path("tests/data/event-calendar-items.json").read_text(encoding="utf-8")
+    )
     target = json.loads(
-        Path("tests/data/event-calendar-items-filtered.json").read_text()
+        Path("tests/data/event-calendar-items-filtered.json").read_text(
+            encoding="utf-8"
+        )
     )
 
     actual = logic.filter_items(items)
@@ -18,7 +22,9 @@ def test_filter_items():
 
 def test_map_items():
     items = json.loads(
-        Path("tests/data/event-calendar-items-filtered.json").read_text()
+        Path("tests/data/event-calendar-items-filtered.json").read_text(
+            encoding="utf-8"
+        )
     )
     target = [
         logic.Appointment(

@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from icalendar import Calendar, Event, vText
+from icalendar import Calendar, Event
 
 from spielerplus_calendar.logic import Appointment
 

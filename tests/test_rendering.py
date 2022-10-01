@@ -1,4 +1,3 @@
-import json
 from datetime import datetime
 from pathlib import Path
 
@@ -45,7 +44,7 @@ def test_to_calendar():
     cal = rendering.to_icalendar(appointments, "HSG Blau-Weiß 22/23", timestamp)
     actual = cal.to_ical().decode().replace("\r\n", "\n")
 
-    target = Path("tests/data/event-calendar.ics").read_text()
+    target = Path("tests/data/event-calendar.ics").read_text(encoding="utf-8")
 
     assert actual == target
 
