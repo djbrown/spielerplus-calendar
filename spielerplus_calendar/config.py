@@ -5,7 +5,6 @@ from typing import NamedTuple
 
 class Config(NamedTuple):
     server: str
-    identity: str
     team_name: str
 
 
