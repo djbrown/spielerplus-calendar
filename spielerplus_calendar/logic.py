@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-from typing import TypedDict
+from typing import NamedTuple
 
 from spielerplus_calendar import parsing
 
@@ -15,17 +15,13 @@ def filter_items(items: list) -> list:
     return filtered
 
 
-Appointment = TypedDict(
-    "Appointment",
-    {
-        "id": int,
-        "title": str,
-        "start": datetime,
-        "end": datetime,
-        "url": str,
-        "color": str,
-    },
-)
+class Appointment(NamedTuple):
+    id: int
+    title: str
+    start: datetime
+    end: datetime
+    url: str
+    color: str
 
 
 def to_appointment(item) -> Appointment:
