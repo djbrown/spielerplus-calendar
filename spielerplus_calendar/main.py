@@ -1,5 +1,3 @@
-from pathlib import Path
-
 from spielerplus_calendar import appointment, config, crawler, parsing, rendering
 
 
@@ -14,8 +12,7 @@ def create_ics(server: str, identity: str, team_name) -> str:
 
 def main():
     conf = config.from_file()
-    identity = Path("identity.txt").read_text("utf-8").strip()
-    ics = create_ics(conf.server, identity, conf.team_name)
+    ics = create_ics(conf.server, conf.identity, conf.team_name)
     print(ics)
 
 

@@ -3,13 +3,6 @@ from datetime import datetime
 from spielerplus_calendar import appointment
 
 
-def identity():
-    return (
-        'some:3:{d:2;o:5:"_identity";l:6;x:85:'
-        '"[13245,"54qwe5wew8e7-687qweLq",23432,"65719",null]";}'
-    )
-
-
 def practice():
     return appointment.Appointment(
         id=12345,
