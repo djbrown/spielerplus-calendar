@@ -1,5 +1,7 @@
-__pycache__
-.vscode/
-.python-version
-
 /config.json
+
+/.vscode/
+
+__pycache__
+/.python-version
+/.mypy_cache/
