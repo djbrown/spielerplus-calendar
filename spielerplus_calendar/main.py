@@ -1,7 +1,7 @@
 from spielerplus_calendar import appointment, config, crawler, parsing, rendering
 
 
-def create_ics(server: str, identity: str, team_name) -> str:
+def team_calendar(server: str, identity: str, team_name) -> str:
     html = crawler.fetch_event_calendar(server, identity)
     items = parsing.parse_event_calendar(html)
     filtered = appointment.filter_items(items)
@@ -12,7 +12,7 @@ def create_ics(server: str, identity: str, team_name) -> str:
 
 def main():
     conf = config.from_file()
-    ics = create_ics(conf.server, conf.identity, conf.team_name)
+    ics = team_calendar(conf.server, conf.identity, conf.team_name)
     print(ics)
 
 
