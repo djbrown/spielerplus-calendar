@@ -22,7 +22,6 @@ def parse_timestamp(timestamp: str) -> datetime:
 
 
 def parse_event_list_items(html_text: str) -> list[dict]:
-
     dom = html.fromstring(html_text)
     items: list[html.HtmlElement] = dom.xpath(
         (
@@ -52,13 +51,13 @@ def _parse_event_list_item(item: html.HtmlElement) -> dict:
     return {"id": event_id, "title": title, "start": meet, "end": end, "url": url}
 
 
-def _parse_begin(item: html.HtmlElement) -> tuple[datetime, datetime]:
+def _parse_begin(item: html.HtmlElement) -> datetime:
     begin_date_xpath = (
         ".//div[@class='panel-heading-info']/div[@class='panel-subtitle']"
     )
     begin_date_text: str = item.xpath(begin_date_xpath)[0].text
-    (begin_day, begin_month) = begin_date_text.split(".")
-    (begin_day, begin_month) = (int(begin_day), int(begin_month))
+    (begin_day_text, begin_month_text) = begin_date_text.split(".")
+    (begin_day, begin_month) = (int(begin_day_text), int(begin_month_text))
 
     begin_time_xpath = (
         ".//div[@class='event-time-item'"
@@ -67,8 +66,8 @@ def _parse_begin(item: html.HtmlElement) -> tuple[datetime, datetime]:
         "/div[@class='event-time-value']"
     )
     begin_time_text: str = item.xpath(begin_time_xpath)[0].text
-    (begin_hour, begin_minutes) = begin_time_text.split(":")
-    (begin_hour, begin_minutes) = (int(begin_hour), int(begin_minutes))
+    (begin_hour_text, begin_minutes_text) = begin_time_text.split(":")
+    (begin_hour, begin_minutes) = (int(begin_hour_text), int(begin_minutes_text))
 
     return datetime(
         datetime.today().year, begin_month, begin_day, begin_hour, begin_minutes
@@ -85,14 +84,14 @@ def _parse_end(item: html.HtmlElement, begin: datetime) -> datetime:
     if end_time_text == "-:-":
         return begin + timedelta(minutes=90)
 
-    (end_hour, end_minutes) = end_time_text.split(":")
-    (end_hour, end_minutes) = (int(end_hour), int(end_minutes))
+    (end_hour_text, end_minutes_text) = end_time_text.split(":")
+    (end_hour, end_minutes) = (int(end_hour_text), int(end_minutes_text))
     return datetime(
         datetime.today().year, begin.month, begin.day, end_hour, end_minutes
     )
 
 
-def _parse_meet(item: html.HtmlElement, begin: datetime) -> datetime | None:
+def _parse_meet(item: html.HtmlElement, begin: datetime) -> datetime:
     meet_time_xpath = (
         ".//div[@class='event-time-item'"
         " and div[@class='event-time-label' and text()='Treffen']]"
@@ -102,8 +101,8 @@ def _parse_meet(item: html.HtmlElement, begin: datetime) -> datetime | None:
     if meet_time_text == "-:-":
         return begin
 
-    (meet_hour, meet_minutes) = meet_time_text.split(":")
-    (meet_hour, meet_minutes) = (int(meet_hour), int(meet_minutes))
+    (meet_hour_text, meet_minutes_text) = meet_time_text.split(":")
+    (meet_hour, meet_minutes) = (int(meet_hour_text), int(meet_minutes_text))
     return datetime(
         datetime.today().year, begin.month, begin.day, meet_hour, meet_minutes
     )

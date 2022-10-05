@@ -17,6 +17,7 @@ black = "22.*"
 pylint = "2.*"
 mypy = "0.*"
 types-requests = "2.*"
+lxml-stubs = "^0.4.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
