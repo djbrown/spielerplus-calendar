@@ -1,5 +1,6 @@
 import json
 import re
+import typing
 from datetime import datetime, timedelta
 
 from lxml import html
@@ -23,13 +24,12 @@ def parse_timestamp(timestamp: str) -> datetime:
 
 def parse_event_list_items(html_text: str) -> list[dict]:
     dom = html.fromstring(html_text)
-    items: list[html.HtmlElement] = dom.xpath(
-        (
-            "//div[@class='list event'"
-            " and .//button[@class='participation-button selected'"
-            " and @title = 'Zugesagt']]"
-        )
+    item_xpath = (
+        "//div[@class='list event'"
+        " and .//button[@class='participation-button selected'"
+        " and @title = 'Zugesagt']]"
     )
+    items = typing.cast(html.HtmlElement, dom.xpath(item_xpath))
 
     return [_parse_event_list_item(item) for item in items]
 
