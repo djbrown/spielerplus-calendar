@@ -9,5 +9,5 @@ app = Flask(__name__)
 def team_calendar_view():
     conf = config.from_file()
     ics = main.team_calendar(conf.server, conf.identity, conf.team_name)
-    headers = {"content-disposition": 'attachment; filename="calendar.ics"'}
+    headers = {"content-disposition": 'attachment; filename="team.ics"'}
     return Response(ics, mimetype="text/calendar", headers=headers)
