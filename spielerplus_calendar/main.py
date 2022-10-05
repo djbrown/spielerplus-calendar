@@ -9,10 +9,18 @@ def team_calendar(server: str, identity: str, team_name) -> str:
     calendar = rendering.to_icalendar(appointments, team_name)
     return calendar.to_ical().decode("utf-8")
 
+def personal_calendar(server: str, identity: str, team_name) -> str:
+    html = crawler.fetch_event_list(server, identity)
+    items = parsing.parse_event_list_items(html)
+    appointments = [appointment.from_event_list_item(item) for item in items]
+    calendar = rendering.to_icalendar(appointments, team_name)
+    return calendar.to_ical().decode("utf-8")
+
 
 def main():
     conf = config.from_file()
     ics = team_calendar(conf.server, conf.identity, conf.team_name)
+    ics = personal_calendar(conf.server, conf.identity, conf.team_name)
     print(ics)
 
 

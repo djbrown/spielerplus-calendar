@@ -11,3 +11,11 @@ def team_calendar_view():
     ics = main.team_calendar(conf.server, conf.identity, conf.team_name)
     headers = {"content-disposition": 'attachment; filename="team.ics"'}
     return Response(ics, mimetype="text/calendar", headers=headers)
+
+
+@app.route("/personal/")
+def personal_calendar_view():
+    conf = config.from_file()
+    ics = main.personal_calendar(conf.server, conf.identity, conf.team_name)
+    headers = {"content-disposition": 'attachment; filename="personal.ics"'}
+    return Response(ics, mimetype="text/calendar", headers=headers)

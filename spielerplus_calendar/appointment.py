@@ -31,3 +31,13 @@ def from_calendar_item(item) -> Appointment:
         end=parsing.parse_timestamp(item["end"]) - timedelta(days=1),
         url=item["url"],
     )
+
+
+def from_event_list_item(item) -> Appointment:
+    return Appointment(
+        id=item["id"],
+        title=item["title"],
+        start=item["start"],
+        end=item["end"],
+        url=item["url"],
+    )
