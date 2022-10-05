@@ -16,7 +16,7 @@ def filter_items(items: list) -> list:
 
 
 class Appointment(NamedTuple):
-    id: int
+    id: str
     title: str
     start: datetime
     end: datetime
@@ -25,7 +25,7 @@ class Appointment(NamedTuple):
 
 def from_calendar_item(item) -> Appointment:
     return Appointment(
-        id=item["id"],
+        id=str(item["id"]),
         title=item["title"],
         start=parsing.parse_timestamp(item["start"]),
         end=parsing.parse_timestamp(item["end"]) - timedelta(days=1),
