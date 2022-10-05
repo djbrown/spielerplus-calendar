@@ -23,7 +23,7 @@ class Appointment(NamedTuple):
     url: str
 
 
-def to_appointment(item) -> Appointment:
+def from_calendar_item(item) -> Appointment:
     return Appointment(
         id=item["id"],
         title=item["title"],

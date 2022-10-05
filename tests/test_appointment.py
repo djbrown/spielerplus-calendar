@@ -22,6 +22,6 @@ def test_map_items():
     )
     target = fixtures.filtered_appointments()
 
-    actual = [appointment.to_appointment(item) for item in items]
+    actual = [appointment.from_calendar_item(item) for item in items]
 
     assert actual == target
