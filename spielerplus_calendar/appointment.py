@@ -21,7 +21,6 @@ class Appointment(NamedTuple):
     start: datetime
     end: datetime
     url: str
-    color: str
 
 
 def to_appointment(item) -> Appointment:
@@ -31,5 +30,4 @@ def to_appointment(item) -> Appointment:
         start=parsing.parse_timestamp(item["start"]),
         end=parsing.parse_timestamp(item["end"]) - timedelta(days=1),
         url=item["url"],
-        color=item["color"],
     )

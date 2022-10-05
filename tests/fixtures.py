@@ -10,7 +10,6 @@ def practice():
         start=datetime(2022, 9, 16, 18, 40),
         end=datetime(2022, 9, 16, 20, 30),
         url="/training/view?id=12345",
-        color="#44AD34",
     )
 
 
@@ -22,7 +21,6 @@ def appointments():
             start=datetime(2022, 9, 30, 18, 55, 00),
             end=datetime(2022, 9, 30, 20, 30, 00),
             url="/training/view?id=65426556",
-            color="#44AD34",
         ),
         appointment.Appointment(
             id=5603407,
@@ -30,7 +28,6 @@ def appointments():
             start=datetime(2022, 7, 11, 18, 10, 00),
             end=datetime(2022, 7, 11, 20, 00, 00),
             url="/game/view?id=5603407",
-            color="#34692D",
         ),
         appointment.Appointment(
             id=1049518,
@@ -38,7 +35,6 @@ def appointments():
             start=datetime(2022, 4, 24, 11, 55, 00),
             end=datetime(2022, 4, 24, 15, 30, 00),
             url="/event/view?id=1049518",
-            color="#34692D",
         ),
         appointment.Appointment(
             id=710393,
@@ -46,7 +42,6 @@ def appointments():
             start=datetime(2022, 7, 9, 12, 45, 00),
             end=datetime(2022, 7, 9, 23, 59, 59),
             url="/tournament/view?id=710393",
-            color="#34692D",
         ),
     ]
 
@@ -59,7 +54,6 @@ def filtered_appointments():
             start=datetime(2022, 9, 5, 17, 55, 00),
             end=datetime(2022, 9, 5, 20, 00, 00),
             url="/training/view?id=12329600",
-            color="#44AD34",
         ),
         appointment.Appointment(
             id=12899706,
@@ -67,7 +61,6 @@ def filtered_appointments():
             start=datetime(2022, 9, 12, 17, 50, 00),
             end=datetime(2022, 9, 12, 20, 00, 00),
             url="/training/view?id=12899706",
-            color="#44AD34",
         ),
         appointment.Appointment(
             id=12899707,
@@ -75,7 +68,6 @@ def filtered_appointments():
             start=datetime(2022, 9, 19, 18, 25, 00),
             end=datetime(2022, 9, 19, 20, 00, 00),
             url="/training/view?id=12899707",
-            color="#44AD34",
         ),
         appointment.Appointment(
             id=54026552,
@@ -83,7 +75,6 @@ def filtered_appointments():
             start=datetime(2022, 9, 2, 17, 55, 00),
             end=datetime(2022, 9, 2, 20, 00, 00),
             url="/training/view?id=54026552",
-            color="#44AD34",
         ),
         appointment.Appointment(
             id=654026553,
@@ -91,7 +82,6 @@ def filtered_appointments():
             start=datetime(2022, 9, 9, 17, 55, 00),
             end=datetime(2022, 9, 9, 20, 00, 00),
             url="/training/view?id=654026553",
-            color="#44AD34",
         ),
         appointment.Appointment(
             id=54026552,
@@ -99,7 +89,6 @@ def filtered_appointments():
             start=datetime(2022, 9, 16, 18, 40, 00),
             end=datetime(2022, 9, 16, 20, 30, 00),
             url="/training/view?id=54026552",
-            color="#44AD34",
         ),
         appointment.Appointment(
             id=65426555,
@@ -107,7 +96,6 @@ def filtered_appointments():
             start=datetime(2022, 9, 23, 18, 55, 00),
             end=datetime(2022, 9, 23, 20, 30, 00),
             url="/training/view?id=65426555",
-            color="#44AD34",
         ),
         appointment.Appointment(
             id=65426556,
@@ -115,7 +103,6 @@ def filtered_appointments():
             start=datetime(2022, 9, 30, 18, 55, 00),
             end=datetime(2022, 9, 30, 20, 30, 00),
             url="/training/view?id=65426556",
-            color="#44AD34",
         ),
         appointment.Appointment(
             id=5440992,
@@ -123,7 +110,6 @@ def filtered_appointments():
             start=datetime(2022, 4, 27, 16, 50, 00),
             end=datetime(2022, 4, 27, 18, 30, 00),
             url="/game/view?id=5440992",
-            color="#34692D",
         ),
         appointment.Appointment(
             id=5603407,
@@ -131,7 +117,6 @@ def filtered_appointments():
             start=datetime(2022, 7, 11, 18, 10, 00),
             end=datetime(2022, 7, 11, 20, 00, 00),
             url="/game/view?id=5603407",
-            color="#34692D",
         ),
         appointment.Appointment(
             id=1049518,
@@ -139,7 +124,6 @@ def filtered_appointments():
             start=datetime(2022, 4, 24, 11, 55, 00),
             end=datetime(2022, 4, 24, 15, 30, 00),
             url="/event/view?id=1049518",
-            color="#34692D",
         ),
         appointment.Appointment(
             id=1065779,
@@ -147,7 +131,6 @@ def filtered_appointments():
             start=datetime(2022, 5, 25, 18, 00, 00),
             end=datetime(2022, 5, 25, 23, 59, 59),
             url="/event/view?id=1065779",
-            color="#34692D",
         ),
         appointment.Appointment(
             id=679238,
@@ -155,7 +138,6 @@ def filtered_appointments():
             start=datetime(2022, 4, 30, 10, 00, 00),
             end=datetime(2022, 4, 30, 17, 00, 00),
             url="/tournament/view?id=679238",
-            color="#34692D",
         ),
         appointment.Appointment(
             id=710393,
@@ -163,6 +145,5 @@ def filtered_appointments():
             start=datetime(2022, 7, 9, 12, 45, 00),
             end=datetime(2022, 7, 9, 23, 59, 59),
             url="/tournament/view?id=710393",
-            color="#34692D",
         ),
     ]
