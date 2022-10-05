@@ -28,7 +28,7 @@ def test_to_calendar_event():
         "DTSTART;VALUE=DATE-TIME:20220916T184000\r\n"
         "DTEND;VALUE=DATE-TIME:20220916T203000\r\n"
         "DTSTAMP;VALUE=DATE-TIME:" + timestamp.strftime("%Y%m%dT%H%M%S") + "Z\r\n"
-        "UID:event/12345@spielerplus.de\r\n"
+        "UID:12345\r\n"
         "END:VEVENT\r\n"
     )
 

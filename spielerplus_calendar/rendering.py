@@ -28,6 +28,6 @@ def to_icalendar_event(appointment: Appointment, timestamp: datetime = None) -> 
     event.add("dtstart", appointment.start)
     event.add("dtend", appointment.end)
     event.add("dtstamp", datetime.now() if timestamp is None else timestamp)
-    event["uid"] = f"event/{appointment.id}@spielerplus.de"
+    event["uid"] = f"{appointment.id}"
 
     return event
