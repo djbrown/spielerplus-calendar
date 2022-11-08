@@ -23,3 +23,8 @@ Get ics calendar data for spielerplus team.
 ## CLI
 
 `poetry run python spielerplus_calendar/main.py`
+
+## production
+
+`poetry install --with prod`
+
