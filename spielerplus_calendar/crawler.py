@@ -5,8 +5,16 @@ import requests
 
 def fetch_event_list(server: str, identity: str) -> str:
     html = _fetch_event_list(server, identity, old=True)
+    html += _fetch_todays_event_list(server, identity)
     html += _fetch_event_list(server, identity, old=False)
     return html
+
+
+def _fetch_todays_event_list(server: str, identity: str) -> str:
+    url = f"{server}/events"
+    cookies = dict(_identity=urllib.parse.quote(identity))
+    response = requests.get(url, cookies=cookies, timeout=5)
+    return response.text
 
 
 def _fetch_event_list(server: str, identity: str, old: bool) -> str:
