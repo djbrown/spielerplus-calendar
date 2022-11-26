@@ -20,7 +20,7 @@ def personal_calendar(server: str, identity: str, team_name) -> str:
 
 def main():
     conf = config.from_file()
-    ics = team_calendar(conf.server, conf.identity, conf.team_name)
+    # ics = team_calendar(conf.server, conf.identity, conf.team_name)
     ics = personal_calendar(conf.server, conf.identity, conf.team_name)
     print(ics)
 
