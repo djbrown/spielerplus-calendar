@@ -41,6 +41,11 @@ def _parse_event_list_item(item: html.HtmlElement) -> dict:
     title_xpath = ".//div[@class='panel-heading-text']/div[@class='panel-title']"
     title: str = item.xpath(title_xpath)[0].text
 
+    subtitle_xpath = ".//div[@class='panel-heading-text']/div[@class='panel-subtitle']"
+    subtitle = item.xpath(subtitle_xpath)
+    if subtitle:
+        title += " - " + subtitle[0].text
+
     begin = _parse_begin(item)
     end = _parse_end(item, begin)
     meet = _parse_meet(item, begin)

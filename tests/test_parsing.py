@@ -93,3 +93,20 @@ def test_parse_event_list_today():
     actual = parsing.parse_event_list_items(html)
 
     assert actual == target
+
+
+def test_parse_event_list_item_subtitle():
+    html = Path("tests/data/event-list-item-subtitle.html").read_text("utf-8")
+    target = [
+        {
+            "id": "event-event-11125",
+            "title": "Training + Spiel - SG Gegner",
+            "start": datetime(datetime.today().year, 9, 23, 18, 55),
+            "end": datetime(datetime.today().year, 9, 23, 20, 30),
+            "url": "/event/view?id=11125",
+        },
+    ]
+
+    actual = parsing.parse_event_list_items(html)
+
+    assert actual == target
