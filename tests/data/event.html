@@ -1,0 +1,1158 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Fr, 09/12/2022</title>
+<meta name="description" content="App zum Team verwalten, Termine planen, Zu- und Absagen live verfolgen, Spielbericht, Teamkasse, Strafkatalog uvm.">
+<meta name="keywords" content="app, team, mannschaft, verein, trainer, spieler, verwalten, verwaltung, managen, termin, spiel, training, turnier, spielbericht, teamkasse, strafkatalog">
+<meta property="og:title" content="SpielerPlus - Alles was dein Team braucht!">
+<meta property="og:url" content="https://www.spielerplus.de">
+<meta property="og:description" content="App zum Team verwalten, Termine planen, Zu- und Absagen live verfolgen, Spielbericht, Teamkasse, Strafkatalog uvm.">
+<meta property="og:image" content="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/misc/android-chrome-512x512.png">
+<meta property="og:site_name" content="SpielerPlus">
+<meta property="og:type" content="website">
+<meta property="fb:app_id" content="1476516082559959">
+<meta name="msapplication-config" content="none">
+<link href="//assets.spielerplus.de/assets/b95ac217aade08201b2c03726fbe7450/css/spicon.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="//assets.spielerplus.de/assets/8f7e7bc527ad6ed4c286bd7a734a5ecc/fonts.css" rel="stylesheet">
+<link href="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/misc/favicon.ico" rel="icon">
+<link href="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/misc/favicon-32x32.png" rel="icon" sizes="32x32">
+<link href="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/misc/android-chrome-192x192.png" rel="icon" sizes="192x192">
+<link href="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/misc/android-chrome-512x512.png" rel="icon" sizes="512x512">
+<link href="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/misc/apple-touch-icon.png" rel="apple-touch-icon">
+<link href="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/misc/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/misc/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/misc/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/css/main.css" rel="stylesheet">
+<link href="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/css/design.css" rel="stylesheet">
+<link href="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/css/slick.css" rel="stylesheet">
+<link href="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/css/design-overwrites.css" rel="stylesheet">
+<link href="//assets.spielerplus.de/assets/c9eff30788510ad3c0aa1bc78a5480b4/css/vue-main.css" rel="stylesheet">
+<link href="//assets.spielerplus.de/assets/0259cc93fd0019c041928918cfca3008/themes/smoothness/jquery-ui.css" rel="stylesheet">
+<style>
+    .carpool-item-inner {
+        border-bottom: 2px solid #f8f8f8;
+        margin-bottom: 20px;
+    }
+    .carpool-item p {
+        margin-bottom: 5px;
+    }
+</style>
+<style>
+    .maps_container iframe{
+        pointer-events: none;
+    }
+</style>
+<script src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/js/sp-client-info.js?v=1"></script> </head>
+<body class=" loggedin">
+
+<script data-cmp-vendor="s905" type="text/javascript" class="cmplazyload">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5F3BQ9');
+</script>
+
+<script>
+        if (typeof dataLayer == "object") {
+            dataLayer.push({'event': 'cmpEvent', 'cmpGDPR': '0'});
+        }
+    </script>
+<div id="event-center-modal" class="classic-modal hidden-print modal" role="dialog" tabindex="-1">
+<div class="modal-dialog ">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<div id="event-center-modal_title"></div>
+</div>
+<div class="modal-body">
+<div id="event-center-modal_content"><div class="modal-loading"><img src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/graphics/ic_64_loading.png" alt=""><div class="modal-loading-title">Inhalt wird geladen ...</div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="loading-spinner">
+<div class="loading-spinner-inner">
+<i id="w22" class="fa-circle-notch far fa-fw fa-sm fa-spin" style="color: #535353;"></i> </div>
+</div>
+<input id="menu-checkbox" type="checkbox">
+<script type="text/javascript">document.getElementById("menu-checkbox").checked = false;</script>
+<nav id="menu">
+<div id="menu-header">
+<a href="/site/select-team"><div class="menu-header-cell">
+<div class="menu-header-icon">
+<div style="border-radius: 16px; overflow: hidden;"><div style="width:28px; height:28px; position: relative; overflow: hidden; border-radius:50%; background-color: #ffffff"><img src="https://assets.spielerplus.de/images/team_logo/200x200/LOGO-ID.jpg" alt="" style="left:0.79245283018868px; top:0.79245283018868px; width:26.415094339623px; height:26.415094339623px; vertical-align: middle; position: absolute"></div></div>
+</div>
+<div class="menu-header-content">
+<div class="menu-header-label">Team Name</div>
+<div class="menu-header-sublabel">User Name</div>
+</div>
+<div class="menu-header-switch"><i id="w41" class="fa-switch-arrows sp fa-fw fa-sm" style="color: #FFFFFF;"></i>
+</div>
+</div></a> </div>
+<div id="navigation-drawer">
+<ul id="w42" class="nav nav-pills nav-stacked kv-sidenav nav"><li><a class="ec-badge" href="/" data-ga="nav-home"><i id="w23" class="nav-icon fa-nav-home sp fa-fw fa-2x" style="color: #767676;"></i><div class="nav-label">Startseite</div><span id="spBadge_0" class="badge badge-danger badge-pos-nav badge-dot" style="display:none;"></span></a></li>
+<li><a class="ec-badge" href="/events" data-ga="nav-events"><i id="w24" class="nav-icon fa-nav-events sp fa-fw fa-2x" style="color: #767676;"></i><div class="nav-label">Termine</div><span id="spBadge_2" class="badge badge-danger badge-pos-nav badge-dot" style="display:none;"></span></a></li>
+<li><a class="ec-badge" href="/carpool" data-ga="nav-carpool"><i id="w25" class="nav-icon fa-nav-carpool sp fa-fw fa-2x" style="color: #767676;"></i><div class="nav-label">Fahrgemeinschaften</div><span id="spBadge_3" class="badge badge-danger badge-pos-nav badge-dot" style="display:none;"></span></a></li>
+<li><a class="ec-badge" href="/team" data-ga="nav-team"><i id="w26" class="nav-icon fa-nav-members sp fa-fw fa-2x" style="color: #767676;"></i><div class="nav-label">Team</div><span id="spBadge_4" class="badge badge-danger badge-pos-nav badge-dot" style="display:none;"></span></a></li>
+<li><a class="ec-badge" href="/chat" data-ga="nav-chat"><i id="w27" class="nav-icon fa-nav-chat sp fa-fw fa-2x" style="color: #767676;"></i><div class="nav-label">Chat</div><span id="spBadge_5" class="badge badge-danger badge-pos-nav badge-dot" style="display:none;"></span></a></li>
+<li><a class="ec-badge" href="/vote" data-ga="nav-vote"><i id="w28" class="nav-icon fa-nav-poll sp fa-fw fa-2x" style="color: #767676;"></i><div class="nav-label">Abstimmungen</div><span id="spBadge_6" class="badge badge-danger badge-pos-nav badge-dot" style="display:none;"></span></a></li>
+<li><a class="ec-badge" href="/cashbox" data-ga="nav-cashbox"><i id="w29" class="nav-icon fa-nav-cashbox sp fa-fw fa-2x" style="color: #767676;"></i><div class="nav-label">Teamkasse</div><span id="spBadge_7" class="badge badge-danger badge-pos-nav badge-dot" style="display:none;"></span></a></li>
+<li><a class="ec-badge" href="/betgame" data-ga="nav-betgame"><i id="w30" class="nav-icon fa-nav-betgame sp fa-fw fa-2x" style="color: #767676;"></i><div class="nav-label">Tipprunde</div><span id="spBadge_8" class="badge badge-danger badge-pos-nav badge-dot" style="display:none;"></span></a></li>
+<li><a class="ec-badge" href="/participation" data-ga="nav-participation"><i id="w31" class="nav-icon fa-nav-statistics sp fa-fw fa-2x" style="color: #767676;"></i><div class="nav-label">Statistiken</div><span id="spBadge_9" class="badge badge-danger badge-pos-nav badge-dot" style="display:none;"></span></a></li>
+<li><a class="ec-badge" href="/fitness" data-ga="nav-fitness"><i id="w32" class="nav-icon fa-nav-fitness sp fa-fw fa-2x" style="color: #767676;"></i><div class="nav-label">Academy</div><span id="spBadge_0" class="badge badge-danger badge-pos-nav badge-dot" style="display:none;"></span></a></li>
+<li><a class="ec-badge" href="/tracktics" data-ga="nav-tracktics"><i id="w33" class="nav-icon fa-nav-tracking sp fa-fw fa-2x" style="color: #767676;"></i><div class="nav-label">Tracking</div><span id="spBadge_10" class="badge badge-danger badge-pos-nav badge-dot" style="display:none;"></span></a></li>
+<li><a class="ec-badge" href="/absence" data-ga="nav-absence"><i id="w34" class="nav-icon fa-nav-absence sp fa-fw fa-2x" style="color: #767676;"></i><div class="nav-label">Urlaub/Krank</div><span id="spBadge_11" class="badge badge-danger badge-pos-nav badge-dot" style="display:none;"></span></a></li>
+<li><a class="ec-badge" href="/cloud" data-ga="nav-cloud"><i id="w35" class="nav-icon fa-nav-cloud sp fa-fw fa-2x" style="color: #767676;"></i><div class="nav-label">TeamCloud</div><span id="spBadge_12" class="badge badge-danger badge-pos-nav badge-dot" style="display:none;"></span></a></li>
+<li><a class="ec-badge" href="/a/appstauber" data-ga="nav-appstauber"><i id="w36" class="nav-icon fa-nav-sale sp fa-fw fa-2x" style="color: #767676;"></i><div class="nav-label">Appstauber</div><span id="spBadge_14" class="badge badge-danger badge-pos-nav badge-dot" style="display:none;"></span></a></li>
+<li><a class="ec-badge" href="/a/news" data-ga="nav-news"><i id="w37" class="nav-icon fa-nav-news sp fa-fw fa-2x" style="color: #767676;"></i><div class="nav-label">Neuigkeiten</div><span id="spBadge_15" class="badge badge-danger badge-pos-nav badge-dot" style="display:none;"></span></a></li>
+<li><a class="ec-badge" href="/settings" data-ga="nav-settings"><i id="w38" class="nav-icon fa-nav-settings sp fa-fw fa-2x" style="color: #767676;"></i><div class="nav-label">Einstellungen</div><span id="spBadge_16" class="badge badge-danger badge-pos-nav badge-dot" style="display:none;"></span></a></li></ul> </div>
+</nav>
+<label id="overlay" for="menu-checkbox"></label>
+<div id="header">
+<div id="navigation-title">
+<div class="header-buttons-left">
+<label id="menu-btn" for="menu-checkbox"><span id="spBadge_burger" class="badge badge-danger badge-pos-nav badge-dot" style="display:none;"></span><i id="w43" class="hidden-print fa-nav-menu sp fa-fw fa-2x" style="color: #FFFFFF;"></i></label> </div>
+<div id="header-title" class="header-title">
+Fr, 09/12/2022 </div>
+<div id="header-buttons-right" class="header-buttons-right">
+<a href="/training/update?id=34026566"><span class="header-icon-circle"><i id="w1" class="fa-button-edit sp fa-fw" style="color: #FFFFFF;"></i></span></a><button type="button" class="btnOpenModal_event-center-modal" data-modal-title="Benachrichtigungszentrale" data-modal-action="/notification/default/index"><span id="spBadge_bell" class="badge badge-danger badge-pos-header badge-dot" style="display:none;"></span><span class="header-icon-circle"><i id="w21" class="fa-button-notification sp fa-fw fa-sm" style="color: #FFFFFF;"></i></span></button> </div>
+</div>
+</div>
+<div class="hidden-print alert__wrapper" style=""></div>
+<div class="main-header"><div class="headline_small"><div><div class="arrow-left"><a href="/events/to-event?eventType=training&amp;eventId=34026566&amp;direction=prev"><i id="w44" class="fa-arrow-left sp fa-fw fa-2x" style="color: #FFFFFF;"></i></a></div><img src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/graphics/ic_96_event_training.svg" alt=""><div class="arrow-right"><a href="/events/to-event?eventType=training&amp;eventId=34026566&amp;direction=next"><i id="w45" class="fa-arrow-right sp fa-fw fa-2x" style="color: #FFFFFF;"></i></a></div></div>Training</div><div class="subline"><div></div></div><img class="bg hidden-print" src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/assets/header/header_background_handball.jpg" alt=""></div>
+<div class="wrap">
+<div class="container">
+
+<div class="row participation-event-view">
+<div class="participation-widget participation-widget-training-34026566" style="position:relative; display: inline-block;"><div class="btn-group participation-widget-buttons"><button type="button" class="participation-button selected" title="Zugesagt" style="background-color: #44AD34; color:white" onClick="showParticipationForm(&quot;training&quot;, 34026566, 1, 123456)"><i id="w4" class="fa-participation-yes sp fa-fw fa-lg" style="color: #FFFFFF;"></i><div class="participation-number">24</div></button><button type="button" class="participation-button" title="Unsicher" style="background-color: #fff; color:dark-grey" onClick="showParticipationForm(&quot;training&quot;, 34026566, 2, 123456)"><i id="w5" class="fa-participation-maybe sp fa-fw fa-lg" style="color: #535353;"></i><div class="participation-number">0</div></button><button type="button" class="participation-button" title="Absagen / Abwesend" style="background-color: #fff; color:dark-grey" onClick="showParticipationForm(&quot;training&quot;, 34026566, 0, 123456)"><i id="w6" class="fa-participation-no sp fa-fw fa-lg" style="color: #535353;"></i><div class="participation-number">1</div></button></div></div>
+<div id="participation-modal" class="classic-modal modal" role="dialog" tabindex="-1" style="overflow-x: auto; overflow-y: auto">
+<div class="modal-dialog ">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<i id="w7" class="arrow-back visible-xs fa-arrow-large-left sp fa-fw fa-lg" data-dismiss="modal" style="color: #A8A8A8;"></i><h3>Teilnehmerliste</h3>
+</div>
+<div class="modal-body">
+</div>
+</div>
+</div>
+</div>
+<div id="participation-form-modal" class="classic-modal modal" role="dialog" tabindex="-1" style="overflow-x: auto; overflow-y: auto">
+<div class="modal-dialog ">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<i id="w8" class="arrow-back visible-xs fa-arrow-large-left sp fa-fw fa-lg" data-dismiss="modal" style="color: #A8A8A8;"></i><h3 class="visible-xs">Teilnahme</h3>
+</div>
+<div class="modal-body">
+</div>
+</div>
+</div>
+</div>
+<div id="participations-modal" class="classic-modal modal" role="dialog" tabindex="-1" style="overflow-x: auto; overflow-y: auto">
+<div class="modal-dialog ">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<i id="w9" class="arrow-back visible-xs fa-arrow-large-left sp fa-fw fa-lg" data-dismiss="modal" style="color: #A8A8A8;"></i><h3>Wann zu/abgesagt</h3>
+</div>
+<div class="modal-body">
+</div>
+</div>
+</div>
+</div>
+<button type="button" class="participants-button" title="Teilnehmer anzeigen" onClick="showParticipation(&quot;training&quot;,34026566)"><i id="w10" class="fa-nav-members sp fa-fw fa-2x" style="color: #44AD34;"></i></button></div>
+<div class="content">
+<div class="event-time">
+<div class="col-xs-4">
+<div class="event-time-item">
+<div class="event-time-label">Treffen</div><div class="event-time-value">18:55</div>
+</div>
+</div>
+<div class="col-xs-4">
+<div class="event-time-item">
+<div class="event-time-label">Beginn</div><div class="event-time-value">19:00</div>
+</div>
+</div>
+<div class="col-xs-4">
+<div class="event-time-item">
+<div class="event-time-label">Ende</div><div class="event-time-value">20:30 </div>
+</div>
+</div>
+</div>
+<div class="event-time">
+<div class="col-xs-12">
+<div class="event-time-item">
+<div class="event-time-label">
+Dies ist ein Serientermin. </div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="base-events">
+<div class="col-md-6">
+<div id="anchor-assignments"></div>
+<div class="last-week text-left">
+Aufgaben<a class="pull-right green" href="/training/assignments?id=34026566"><b>Hinzufügen</b><i id="w11" class="fa-plus sp fa-fw fa-xs" style="margin-left: 8px; color: #44AD34;"></i></a></div>
+<div class="front-page-placeholder"><div class="front-page-placeholder-label">Es wurden noch keine Aufgaben verteilt.</div></div><div id="anchor-fitness"></div>
+<div class="last-week text-left">
+Videos <a class="pull-right green" href="/training/update?id=34026566#section-location"><b>Hinzufügen</b><i id="w12" class="fa-plus sp fa-fw fa-xs" style="margin-left: 8px; color: #44AD34;"></i></a></div>
+<div class="front-page-placeholder">
+<div class="front-page-placeholder-label">
+Noch kein Video verfügbar. </div>
+</div>
+</div>
+<div class="col-md-6">
+
+<div id="vue-app" v-cloak=""></div><div id="anchor-tracking"></div>
+<div class="last-week text-left">
+Tracking</div>
+<div class="front-page-placeholder">
+<div class="front-page-placeholder-label">
+Es sind noch keine Leistungsdaten verfügbar. </div>
+</div>
+<div id="anchor-carpools"></div>
+<div id="modal" class="classic-modal hidden-print modal" role="dialog" tabindex="-1">
+<div class="modal-dialog ">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<div id="modal_title"></div>
+</div>
+<div class="modal-body">
+<div id="modal_content"><div class="modal-loading"><img src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/graphics/ic_64_loading.png" alt=""><div class="modal-loading-title">Inhalt wird geladen ...</div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="last-week text-left">
+Fahrgemeinschaft<a class="btnOpenModal pull-right green" data-modal-title="Fahrgemeinschaft" data-modal-action="/carpool/default/ajax-select-carpool-type?type=training&amp;eid=34026566"><b>Suchen/Anbieten</b><i id="w14" class="fa-plus sp fa-fw fa-xs" style="margin-left: 8px; color: #44AD34;"></i></a></div>
+<div class="front-page-placeholder">
+<div class="front-page-placeholder-label">
+Keiner sucht oder bietet einen Platz an. </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> 
+</div> 
+<div class="green-background-container">
+<div class="wrap">
+<div class="container">
+<div class="sub-navigation"><div class="list"><button type="button" class="list-item bottom-border" title="Teilnehmer anzeigen" onClick="showParticipation(&quot;training&quot;,34026566)"> <span class="list-icon size-24">
+<i id="w48" class="fa-circle-list sp fa-fw fa-lg" style="color: #44AD34;"></i>
+</span>
+<span class="list-content">
+<span class="list-label">
+Teilnehmerliste
+</span>
+</span>
+<span class="list-drilldown">
+<i id="w49" class="fa-drilldown sp fa-sm" style="color: #A8A8A8;"></i>
+</span></button><button type="button" class="btnOpenModal list-item bottom-border" data-modal-title="	Beteiligungen Exportieren" data-modal-content="    &lt;div class=&quot;alert alert--warning alert-white&quot;&gt;
+        &lt;div class=&quot;alert__icon&quot;&gt;&lt;i id=&quot;w15&quot; class=&quot;fa-circle-star sp fa-fw fa-lg&quot; style=&quot;color: #44AD34;&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;div class=&quot;alert__text&quot;&gt;Dies ist eine Premiumfunktion, allerdings steht diese aus aktuellem Anlass vorrübergehend allen Teams zur freien Verfügung.&lt;/div&gt;
+    &lt;/div&gt;&lt;div class=&quot;submit-button&quot;&gt;&lt;a id=&quot;submit-pdf&quot; class=&quot;btn btn-success&quot; href=&quot;/print?route=%2Ftraining%2Fprint-participant-list&amp;amp;params%5Bid%5D=34026566&quot;&gt;&lt;i id=&quot;w16&quot; class=&quot;fa-file-pdf far fa-fw fa-lg&quot; style=&quot;vertical-align: middle; color: #FFFFFF;&quot;&gt;&lt;/i&gt; Download PDF&lt;/a&gt;&lt;a id=&quot;submit-pdf&quot; class=&quot;btn btn-success&quot; href=&quot;/training/print-participant-list?id=34026566&amp;amp;exportCsv=1&quot;&gt;&lt;i id=&quot;w19&quot; class=&quot;fa-file-csv far fa-fw fa-lg&quot; style=&quot;vertical-align: middle; color: #FFFFFF;&quot;&gt;&lt;/i&gt; Download CSV&lt;/a&gt;&lt;/div&gt;"> <span class="list-icon size-24">
+<i id="w50" class="fa-circle-star sp fa-fw fa-lg" style="color: #44AD34;"></i>
+</span>
+<span class="list-content">
+<span class="list-label">
+Beteiligungen Exportieren
+</span>
+</span>
+<span class="list-drilldown">
+<i id="w51" class="fa-drilldown sp fa-sm" style="color: #A8A8A8;"></i>
+</span></button><button type="button" class="btnOpenModal list-item bottom-border" data-modal-title="Corona-Warn-App QR-Code" data-modal-action="/corona/default/modal?type=training&amp;eid=34026566"> <span class="list-icon size-24">
+<i id="w52" class="fa-circle-qr sp fa-fw fa-lg" style="color: #44AD34;"></i>
+</span>
+<span class="list-content">
+<span class="list-label">
+Corona-Warn-App QR-Code
+</span>
+</span>
+<span class="list-drilldown">
+<i id="w53" class="fa-drilldown sp fa-sm" style="color: #A8A8A8;"></i>
+</span></button></div></div>
+</div>
+</div>
+<div class="green-background-top"></div>
+</div>
+<div class="green-background-bottom">
+<div class="wrap">
+<div class="container">
+<div class="info-area"><div class="info-area-icon"><img src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/graphics/ic_48_location.svg" alt=""></div><div class="info-area-content"><h4>Adresse</h4><small>Address</small></div></div><div class="wrap">
+<div class="maps_container">
+<iframe width="100%" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=ADDRESS&key=KEY">
+        </iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="wrap">
+<div class="container"> </div>
+</div>
+<div class="wrap hidden-print">
+<footer>
+<div class="container">
+<div class="footer__logo">
+<a href="">
+<i id="w54" class="fa-sp-logo sp fa-fw fa-2x" style="color: #FFFFFF;"></i> <span>SpielerPlus</span>
+</a>
+</div>
+<ul>
+<li><a href="/site/impressum">Impressum</a></li>
+<li><a href="/site/agb">AGB</a></li> <li><a href="/site/privacy">Datenschutz</a></li>
+<li><a href="/site/contact">FAQ & Support</a></li>
+<li><a href="/premium/onboarding/index">Premium</a></li>
+<li><a href="/site/about">Über uns</a></li>
+<li><a href="https://www.sportplatz-media.com/vermarktung/advertiser" target="_blank">Vermarktung: Sportplatz Media</a></li>
+</ul>
+<div class="footer__backtotop">
+<div class="footer__backtotop__button" onclick="scrollToSmoothly(0, 400)">
+<span>Nach oben</span>
+<i id="w55" class="fa-circle-arrow-up sp fa-fw fa-lg" style="color: #FFFFFF;"></i> </div>
+</div>
+</div>
+</footer>
+</div>
+<div id="premium-required-modal" class="classic-modal modal" role="dialog" tabindex="-1">
+<div class="modal-dialog ">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<i id="w56" class="arrow-back visible-xs fa-arrow-large-left sp fa-fw fa-lg" data-dismiss="modal" style="color: #A8A8A8;"></i>
+</div>
+<div class="modal-body">
+<div class="modal-icon-headline">
+<div class="card-head">
+<img src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/graphics/ic_premium_stars.svg" alt=""> <h1>Premium erforderlich</h1>
+<p>
+Um diese Funktion nutzen zu können, benötigt dein Team eine Premium-Mitgliedschaft. </p>
+</div>
+</div><div class="row"><div class="col-sm-6 col-xs-12"><a class="btn btn-success" href="/premium/onboarding/index?type=team">Mehr erfahren</a><br><br></div><div class="col-sm-6 col-xs-12"><button type="button" class="btn btn-danger" data-dismiss="modal">Abbrechen</button></div></div>
+</div>
+</div>
+</div>
+</div>
+<div id="body-bottom-space"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/js/jquery.countdown.min.js"></script>
+<script src="//assets.spielerplus.de/assets/b95ac217aade08201b2c03726fbe7450/js/regular.min.js"></script>
+<script src="//assets.spielerplus.de/assets/b95ac217aade08201b2c03726fbe7450/js/solid.min.js"></script>
+<script src="//assets.spielerplus.de/assets/b95ac217aade08201b2c03726fbe7450/js/sp.js"></script>
+<script src="//assets.spielerplus.de/assets/b95ac217aade08201b2c03726fbe7450/js/fontawesome.min.js"></script>
+<script src="//assets.spielerplus.de/assets/b95ac217aade08201b2c03726fbe7450/js/v4-shims.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="//assets.spielerplus.de/assets/36315ee9ac607bbb3f1b7fed599e4d32/yii.js"></script>
+<script src="//assets.spielerplus.de/assets/36315ee9ac607bbb3f1b7fed599e4d32/yii.activeForm.js"></script>
+<script src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/js/jquery.autosize.3.0.18.min.js"></script>
+<script src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/js/jquery.mobile-events.min.js"></script>
+<script src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/js/app-helper.js?v=33"></script>
+<script src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/js/scroll.js"></script>
+<script src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/js/modernizr-custom.js"></script>
+<script src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/js/collapse.js"></script>
+<script src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/js/slick.min.js"></script>
+<script src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/js/form-input-label.js"></script>
+<script src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/js/phone-hide-show.js"></script>
+<script src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/js/beforeunload.js"></script>
+<script src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/js/select.js"></script>
+<script src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/js/spielerplus.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.37/vue.global.prod.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/4.1.2/vue-router.global.prod.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-i18n/9.1.10/vue-i18n.global.prod.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.10.2/Sortable.min.js"></script>
+<script src="https://unpkg.com/vuedraggable@4.1.0/dist/vuedraggable.umd.min.js"></script>
+<script type="module" src="//assets.spielerplus.de/assets/c9eff30788510ad3c0aa1bc78a5480b4/js/apps/lineups/LineupMain.js"></script>
+<script src="//assets.spielerplus.de/assets/0259cc93fd0019c041928918cfca3008/jquery-ui.js"></script>
+<script src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/js/jquery.ui.touch-punch.min.js"></script>
+<script src="//assets.spielerplus.de/assets/52aa8db0c9e2382cf5e285feb4d2990e/js/iap.js"></script>
+<script src="//assets.spielerplus.de/assets/12c3756b5d7ad3552426f2d0f0498c22/client/swagger-client.browser.min.js"></script>
+<script src="//assets.spielerplus.de/assets/12c3756b5d7ad3552426f2d0f0498c22/client/event-center.js"></script>
+<script src="//assets.spielerplus.de/assets/e5b492c19fcac22cde544defe028b23b/jquery.pjax.js"></script>
+<script>
+    function onVisible(element, callback) {
+      new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if(entry.intersectionRatio > 0) {
+            callback(element);
+            observer.disconnect();
+          }
+        });
+      }).observe(element);
+    }
+
+    var firebaseParams = {"screen_class":"app-frontend/training","screen_name":"training/view"};
+
+    //Send actual screen
+    AppHelper.trackFirebaseEvent('screen_view', firebaseParams);
+    
+    //Discover Modal view
+    var modals = document.getElementsByClassName('classic-modal');
+    for (var i=0; i<modals.length; i++) {
+        onVisible(modals[i], function(e) {
+            let modalTitle = e.querySelector('.modal-header h3');
+            if (modalTitle !== null) {
+                var modalName = modalTitle.innerText;
+            }
+            let eventParams = {
+                sp_modal: modalName || 'notset'
+            };
+            AppHelper.trackFirebaseEvent('screen_view',  {...eventParams, ...firebaseParams});
+        });    
+    }
+
+    //Discover premium features
+    var receivedPremiumEvents = [];
+    document.addEventListener('premium.feature.replaced', function(e) {
+        if (!receivedPremiumEvents.includes(e.detail.name)) {
+            let eventParams = {
+                sp_name: e.detail.name,
+                sp_type: e.detail.type
+            };
+            AppHelper.trackFirebaseEvent('premium_feature', {...eventParams, ...firebaseParams});
+            
+            receivedPremiumEvents.push(e.detail.name);
+        }
+    });
+    document.addEventListener('premium.feature.cta.click', function(e) {
+            let eventParams = {
+                sp_name: e.detail.name,
+                sp_type: e.detail.type
+            };
+            AppHelper.trackFirebaseEvent('premium_feature', {...eventParams, ...firebaseParams});
+    });
+    
+    function createCountdown(){
+        $('[data-countdown]').each(function() {
+            var thisCD = $(this), finalDate = $(this).data('countdown');
+              thisCD.countdown(finalDate, function(event) {
+                  thisCD.html(event.strftime('%Hh %Mm %Ss'))
+              }).on('finish.countdown', function() {
+                    thisCD.html("Zeit zum Zu-/Absagen abgelaufen");
+              });
+         });
+    };
+
+    $(document).ready(function() {
+        createCountdown();
+    });
+
+    function setPremiumCtas(featureName) {
+        const premiumCta = document.querySelectorAll("[data-premium-cta='" + featureName + "']");
+        const ctaClicked = new CustomEvent('premium.feature.cta.click', { bubbles: true, detail: {name: featureName, type: 'cta_click'}});
+        // replace cta
+        premiumCta.forEach(element => {
+            // change submit buttons
+            if (element.type === "submit") {
+                element.type = "button";
+                element.removeAttribute("form");
+                element.removeAttribute("data-form");
+            }
+            // change links
+            element.removeAttribute("href");
+            // remove easy modal custom behaviors
+            element.removeAttribute("data-modal-action");
+            element.removeAttribute("data-modal-title");
+            element.classList.remove("btnOpenModal");
+            // remove on click events if present
+            element.removeAttribute("onclick");
+            // add new behavior for the element
+            element.setAttribute("data-toggle", "modal");
+            element.setAttribute("data-target", "#premium-required-modal");
+            //console.log(element);
+            //add click event to dispatch custom event
+            element.addEventListener('click', function ctaClickListener(e) {
+                e.target.dispatchEvent(ctaClicked);
+                //Remove after dispatch event only fired once
+                e.target.removeEventListener(e.type, ctaClickListener);
+            }, { once: true });
+        });
+        
+        // replace icons
+        const icons = document.querySelectorAll("[data-premium-icon='" + featureName + "']");
+        icons.forEach(icon => {
+            let parent = icon.parentElement;
+            parent.innerHTML = `<i id="w2" class="fa-circle-star sp fa-fw fa-lg" style="color: #44AD34;"></i>`;
+        });
+    }
+    setPremiumCtas("cudGuests");
+
+    $(document).on('shown.bs.modal', function() {
+        setPremiumCtas("cudGuests");
+    });
+    
+    $('#modal').on('easyModal.load.complete', function () {
+        setPremiumCtas("cudGuests");
+    });
+    
+    $(document).ajaxComplete(function() {
+        setPremiumCtas("cudGuests");
+    })
+    function setPremiumCtas(featureName) {
+        const premiumCta = document.querySelectorAll("[data-premium-cta='" + featureName + "']");
+        const ctaClicked = new CustomEvent('premium.feature.cta.click', { bubbles: true, detail: {name: featureName, type: 'cta_click'}});
+        // replace cta
+        premiumCta.forEach(element => {
+            // change submit buttons
+            if (element.type === "submit") {
+                element.type = "button";
+                element.removeAttribute("form");
+                element.removeAttribute("data-form");
+            }
+            // change links
+            element.removeAttribute("href");
+            // remove easy modal custom behaviors
+            element.removeAttribute("data-modal-action");
+            element.removeAttribute("data-modal-title");
+            element.classList.remove("btnOpenModal");
+            // remove on click events if present
+            element.removeAttribute("onclick");
+            // add new behavior for the element
+            element.setAttribute("data-toggle", "modal");
+            element.setAttribute("data-target", "#premium-required-modal");
+            //console.log(element);
+            //add click event to dispatch custom event
+            element.addEventListener('click', function ctaClickListener(e) {
+                e.target.dispatchEvent(ctaClicked);
+                //Remove after dispatch event only fired once
+                e.target.removeEventListener(e.type, ctaClickListener);
+            }, { once: true });
+        });
+        
+        // replace icons
+        const icons = document.querySelectorAll("[data-premium-icon='" + featureName + "']");
+        icons.forEach(icon => {
+            let parent = icon.parentElement;
+            parent.innerHTML = `<i id="w3" class="fa-circle-star sp fa-fw fa-lg" style="color: #44AD34;"></i>`;
+        });
+    }
+    setPremiumCtas("viewParticipationTimings");
+
+    $(document).on('shown.bs.modal', function() {
+        setPremiumCtas("viewParticipationTimings");
+    });
+    
+    $('#modal').on('easyModal.load.complete', function () {
+        setPremiumCtas("viewParticipationTimings");
+    });
+    
+    $(document).ajaxComplete(function() {
+        setPremiumCtas("viewParticipationTimings");
+    })
+
+
+function showParticipation(eventtype, eventid) {
+    $('#participation-modal .modal-body').html('<div class="modal-loading"><img src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/graphics/ic_64_loading.png" alt=""><div class="modal-loading-title">Liste wird geladen...</div></div>');
+    $('#participation-modal').modal('show');
+    element = $(this);
+    $.ajax({
+        type: 'POST',
+        dataType: 'JSON',
+        url: '/events/ajaxgetparticipation',
+        data: {
+            eventid: eventid,
+            eventtype: eventtype,
+        },
+        success: function (data) {
+            $('#participation-modal .modal-body').html(data.html);
+            window.scrollBy(0,1);
+
+            // attach div to header of this modal
+            var myModal = $('#participation-modal');
+            var contentDiv = $('#participation-modal .modal-body');
+            var headerDiv = $('#participation-modal .modal-header');
+            var addToHeader = $('.modal-header-add');
+            var buttons = myModal.find(contentDiv).find(addToHeader);
+            headerDiv.append(buttons);
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            alert(XMLHttpRequest.responseText  + ' , ' + textStatus + ' , ' + errorThrown);
+        }
+    });
+}
+
+function showParticipationForm(eventtype, eventid, participation, userid, showParticipations) {
+    $('#participation-form-modal .modal-body').html('<div class="modal-loading"><img src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/graphics/ic_64_loading.png" alt=""><div class="modal-loading-title">Formular wird geladen...</div></div>');
+    $('#participation-form-modal').modal('show');
+    element = $(this);
+    $.ajax({
+        type: 'POST',
+        dataType: 'JSON',
+        url: '/events/ajax-participation-form',
+        data: {
+            'Participation[type]': eventtype,
+            'Participation[typeid]': eventid,
+            'Participation[participation]': participation,
+            'Participation[user_id]': userid,
+            'showParticipations': showParticipations,
+        },
+        success: function (data) {
+            // the event was not found
+            if (data.error == 404) {
+                window.location.href = '/events/index';
+            }
+
+            $('#participation-form-modal .modal-body').html(data.html);
+        },
+    error: function (XMLHttpRequest, textStatus, errorThrown) {
+      alert(XMLHttpRequest.responseText  + ' , ' + textStatus + ' , ' + errorThrown);
+    }
+  });
+}
+
+function createGuest(type, typeId, teamId) {
+    if (true) {
+        alert('Um diese Funktion nutzen zu können, wähle eine Premium-Mitgliedschaft');
+        return;
+    }
+
+    var guestName = $('#create-guest').val();
+    if (guestName == '') {
+        alert('Bitte trage einen Namen in das Feld ein');
+        return;
+    }
+    $.ajax({
+        type: 'POST',
+        dataType: 'JSON',
+        url: '/events/ajax-create-guest',
+        data: {
+            'Guest[name]': guestName,
+            'Guest[type]': type,
+            'Guest[type_id]': typeId,
+            'Guest[team_id]': teamId,
+        },
+        success: function (data) {
+            if (data.error == undefined) {
+                $('#create-guest-panel').before(data.html);
+                $('#create-guest').val('');
+            } else {
+                alert(data.error)
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            alert(XMLHttpRequest.responseText  + ' , ' + textStatus + ' , ' + errorThrown);
+        }
+    });
+}
+
+function deleteGuest(guestId) {
+    if (confirm('Bist du sicher?') == false) return;
+    $.ajax({
+        type: 'POST',
+        dataType: 'JSON',
+        url: '/events/ajax-delete-guest',
+        data: {
+            'id': guestId,
+        },
+        success: function (data) {
+            if (data == 'true') {
+                $('#guest-'+guestId).remove();
+            } else {
+                alert(data);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            alert(XMLHttpRequest.responseText  + ' , ' + textStatus + ' , ' + errorThrown);
+        }
+    });
+}
+
+function showNotificationForm() {
+    $('#notification-form-modal .modal-body').html('<div class="modal-loading"><img src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/graphics/ic_64_loading.png" alt=""><div class="modal-loading-title">Formular wird geladen...</div></div>');
+    $('#notification-form-modal').modal('show');
+    $.ajax({
+        type: 'POST',
+        dataType: 'JSON',
+        url: '/events/ajax-notification-form',
+        success: function (data) {
+            $('#notification-form-modal .modal-body').html(data.html);
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            alert(XMLHttpRequest.responseText  + ' , ' + textStatus + ' , ' + errorThrown);
+        }
+    });
+}
+
+function showParticipations(eventType, eventId) {
+    $('#participations-modal .modal-body').html('<div class="modal-loading"><img src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/graphics/ic_64_loading.png" alt=""><div class="modal-loading-title">Liste wird geladen...</div></div>');
+    $('#participations-modal').modal('show');
+    $.ajax({
+        type: 'POST',
+        dataType: 'JSON',
+        url: '/events/ajax-participations',
+        data: {
+            'eventType': eventType,
+            'eventId': eventId,
+        },
+        success: function (data) {
+            $('#participations-modal .modal-body').html(data.html);
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            alert(XMLHttpRequest.responseText  + ' , ' + textStatus + ' , ' + errorThrown);
+        }
+    });
+}
+
+    window.appConfig = {
+        common: {
+            yiiId: null,
+            yiiController: null,
+            route: '/training/view',
+            routeStart: null,
+            locale: 'de',
+            localeFiles: ''
+        },
+        ui: {
+            header: {
+                background: '//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/assets/header/header_background_handball.jpg',
+                image: null,
+                headline: null,
+                subline: null,
+                hasTabs: null
+            },
+            lineup: {
+                field: null
+            }
+        },
+        api: {
+            task: {
+                definitions: null
+            },
+            lineup: {
+                definitions: null
+            },
+            legacy: {
+                definitions: null
+            }
+        }
+    }
+    appConfig.common.routeStart = 'event-details-list';
+    appConfig.common.layout = ''
+    
+    appConfig.common.yiiId = '34026566'
+    appConfig.common.yiiController = 'training'
+    
+    appConfig.ui.lineup.name = 'Training ∙ 09/12/2022 ∙ 18:55 Uhr'
+    appConfig.ui.lineup.field = '//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/lineup-fields/handball.jpg'
+
+    appConfig.ui.header = _.merge(appConfig.ui.header, {
+        image: '//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/graphics/ic_64_event_lineup.svg',
+        headline: 'Training',
+        subline: '09/12/2022 ∙ 18:55 Uhr'
+    })
+    
+    appConfig.api.task = _.merge(appConfig.api.task, {
+        definitions: "https://api.spielerplus.de/task-management/definition/swagger.json",
+        access: {
+            owner_id: "358816",
+            owner_type: "teamId",
+            permission_set: "lineup"
+        },
+        actor: {
+            main: "training:34026566",
+        }
+    })
+    
+    appConfig.api.lineup = _.merge(appConfig.api.lineup, {
+        definitions: "https://api.spielerplus.de/lineup/definition/swagger.json",
+        access: {
+            owner_id: "358816",
+            owner_type: "teamId",
+            permission_set: "lineup"
+        },
+        actor: {
+            main: "training:34026566",
+            template: "team:358816"
+        }
+    })
+    
+    appConfig.api.legacy = _.merge(appConfig.api.legacy, {
+        definitions: "/api/definition/swagger.json"
+    })
+            $( document ).on('click', '.btnOpenModal', function( event ) {
+                // local variables
+                owner       = $(this);
+                myModal     = $('#modal');
+                titleDiv    = $('#modal'+'_title');
+                contentDiv  = $('#modal'+'_content');
+                
+                // clear title / header when modal opens
+                titleDiv.empty();
+                
+                // show loading animation while actual content is beeing loaded
+                myModal.modal('show').find(contentDiv).html('<div class="modal-loading"><img src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/graphics/ic_64_loading.png" alt=""><div class="modal-loading-title">Inhalt wird geladen ...</div></div>');
+                
+                // if the element opening the modal is a link; 
+                // prevent default action (opening the href attribute)
+                if (owner.is('a')) {
+                    event.preventDefault();
+                }
+                
+                // attach back button for mobile and title; if attribute was set
+                titleDiv.append('<i id="w13" class="arrow-back visible-xs fa-arrow-large-left sp fa-fw fa-lg" data-dismiss="modal" style="color: #A8A8A8;"></i>');
+                //myModal.find('.modal-header').append('');
+
+                if (owner.attr('data-modal-title')) {
+                    titleDiv.append('<h3>' + owner.attr('data-modal-title') + '</h3>');
+                }
+
+                // load main-content into the modal  
+                if (owner.attr('data-modal-action')) {
+                    myModal.find(contentDiv).load(owner.attr('data-modal-action'), function( response, status, xhr ) {
+                        // handle error responses
+                        if (status == 'error') {
+                            // TODO: design received json error
+                            // RESPONSE EXAMPLE:
+                            // {"name":"Forbidden","message":"Bearbeiten nicht möglich, da diese Strafe bereits einem Spieler zugewiesen wurde.","code":0,"status":403,"type":"yii\web\ForbiddenHttpException"}
+                            resp = $.parseJSON(response);
+                            myModal.find(contentDiv).html(resp.message);
+                        }
+
+                        // response successfull; 
+                        // check if additional elements are needed in modal header
+                        // if yes; add them to the header div 
+                        if (status == 'success') {
+                            // load custom div into header 
+                            addToHeader = owner.attr('data-modal-header-add');
+                            if (!addToHeader) {
+                                addToHeader = $('.modal-header-add');
+                            }
+                            buttons = myModal.find(contentDiv).find(addToHeader);
+                            titleDiv.append(buttons);
+
+                            // get and register a client script on load
+                            // $.getScript("phpassets"+"/js/form-input-label.js");
+
+                            // trigger event to execute code after modal has been loaded
+                            myModal.trigger('easyModal.load.complete');
+                        }
+                    });
+                } else if (owner.attr('data-modal-content')){
+                    myModal.find(contentDiv).html(owner.attr('data-modal-content'));
+
+                    // trigger event to execute code after modal has been loaded
+                    myModal.trigger('easyModal.load.complete');
+                }
+
+                // set footer
+                // not working for now
+                // $('#modal').find('#modalFooter').load($(this).attr('value')+' #modalFooterContent');
+            });
+
+            // Fix bootstrap modal bug 
+            // https://stackoverflow.com/a/31283732
+            $( document ).on('shown.bs.modal', function() {
+                $("body.modal-open").removeAttr("style");
+            });
+            // shared javascript code between all easyModals
+
+$(function() {
+  $('.main-header').addClass('event');
+});
+
+        $('#download-button').click(function () {
+            alert("triggered");
+            $('#modal').modal('hide');
+        });
+    AppHelper.setFirebaseUProperty('permission_manage_team', '1');
+    AppHelper.setFirebaseUProperty('sporttype', 'handball');
+    AppHelper.setFirebaseUProperty('team_gender', 'youth_boys');
+    AppHelper.setFirebaseUProperty('premium_customer', 'none');
+            $( document ).on('click', '.btnOpenModal_event-center-modal', function( event ) {
+                // local variables
+                owner       = $(this);
+                myModal     = $('#event-center-modal');
+                titleDiv    = $('#event-center-modal'+'_title');
+                contentDiv  = $('#event-center-modal'+'_content');
+                
+                // clear title / header when modal opens
+                titleDiv.empty();
+                
+                // show loading animation while actual content is beeing loaded
+                myModal.modal('show').find(contentDiv).html('<div class="modal-loading"><img src="//assets.spielerplus.de/assets/28f9cc0cbdd026f3250ff7581e6deaa0/images/graphics/ic_64_loading.png" alt=""><div class="modal-loading-title">Inhalt wird geladen ...</div></div>');
+                
+                // if the element opening the modal is a link; 
+                // prevent default action (opening the href attribute)
+                if (owner.is('a')) {
+                    event.preventDefault();
+                }
+                
+                // attach back button for mobile and title; if attribute was set
+                titleDiv.append('<i id="w20" class="arrow-back visible-xs fa-arrow-large-left sp fa-fw fa-lg" data-dismiss="modal" style="color: #A8A8A8;"></i>');
+                //myModal.find('.modal-header').append('');
+
+                if (owner.attr('data-modal-title')) {
+                    titleDiv.append('<h3>' + owner.attr('data-modal-title') + '</h3>');
+                }
+
+                // load main-content into the modal  
+                if (owner.attr('data-modal-action')) {
+                    myModal.find(contentDiv).load(owner.attr('data-modal-action'), function( response, status, xhr ) {
+                        // handle error responses
+                        if (status == 'error') {
+                            // TODO: design received json error
+                            // RESPONSE EXAMPLE:
+                            // {"name":"Forbidden","message":"Bearbeiten nicht möglich, da diese Strafe bereits einem Spieler zugewiesen wurde.","code":0,"status":403,"type":"yii\web\ForbiddenHttpException"}
+                            resp = $.parseJSON(response);
+                            myModal.find(contentDiv).html(resp.message);
+                        }
+
+                        // response successfull; 
+                        // check if additional elements are needed in modal header
+                        // if yes; add them to the header div 
+                        if (status == 'success') {
+                            // load custom div into header 
+                            addToHeader = owner.attr('data-modal-header-add');
+                            if (!addToHeader) {
+                                addToHeader = $('.modal-header-add');
+                            }
+                            buttons = myModal.find(contentDiv).find(addToHeader);
+                            titleDiv.append(buttons);
+
+                            // get and register a client script on load
+                            // $.getScript("phpassets"+"/js/form-input-label.js");
+
+                            // trigger event to execute code after modal has been loaded
+                            myModal.trigger('easyModal.load.complete');
+                        }
+                    });
+                } else if (owner.attr('data-modal-content')){
+                    myModal.find(contentDiv).html(owner.attr('data-modal-content'));
+
+                    // trigger event to execute code after modal has been loaded
+                    myModal.trigger('easyModal.load.complete');
+                }
+
+                // set footer
+                // not working for now
+                // $('#modal').find('#modalFooter').load($(this).attr('value')+' #modalFooterContent');
+            });
+
+            // Fix bootstrap modal bug 
+            // https://stackoverflow.com/a/31283732
+            $( document ).on('shown.bs.modal', function() {
+                $("body.modal-open").removeAttr("style");
+            });
+            // CONFIGURE AND INITIALIZE EVENT CENTER
+            eventCenter.configure({
+                api: {
+                    definitions: "https://api.spielerplus.de/eventcenter/definition/swagger.json",
+                },
+                query: {
+                    expireIn: "1209600",
+                    history: "1667753764",
+                    token_prefix: "user:123456:"
+                },
+                badges: {
+                    showBadges: "true",
+                    showCounter: true
+                }
+            });
+
+            // GET BADGES AND REGISTER UI EVENTS
+            eventCenter.badges.get()
+            let navigationBagdes = $('#menu');
+            navigationBagdes.on('click', '.ec-badge', function (event) {
+                eventCenter.badges.delete(event)
+            })
+            // get events for given category
+            eventCenter.resp.getByCategory("2")
+            // when data is available, show bell, activate user interface
+            $( document ).on('eventCenter.data.available', function () {
+               if (eventCenter.storage.isOutdated()) {
+                   eventCenter.badges.bell()
+               }
+            })
+            // trigger necessary events when easy modal has completed content loading
+            $('#event-center-modal').on('easyModal.load.complete', function () {
+                $(eventCenter.ui.pjaxContainerId).hide()
+                $(eventCenter.ui.loaderId).show()
+                // remember when modal was opened
+                eventCenter.storage.setLastOpened()
+                eventCenter.badges.hideBell()
+                
+                let config = {
+                    url: '/notification/default/ajax-index',
+                    push: false,
+                    replace: false
+                }
+                eventCenter.ui.pjaxReloader(config)
+            });
+            let spBadge = {
+                badge: $('.badge'),
+                get: function (identifier) {
+                    this.badge = $('#spBadge_' + identifier);
+                    return this;
+                },
+                setType: function (newClass) {
+                    let cssClasses = [
+                        'badge-primary',
+                        'badge-info',
+                        'badge-warning',
+                        'badge-success',
+                        'badge-danger'
+                    ];
+                    
+                    for (let item of cssClasses) {
+                        this.badge.removeClass(item);
+                    }
+                    
+                    this.badge.addClass(newClass);
+                    return this;
+                },
+                setDataAttribute: function(name, value) {
+                    this.badge.attr(name, value)
+                    return this;
+                },
+                setContent: function (newContent) {
+                    this.badge.html(newContent);
+                    return this;
+                },
+                hide: function () {
+                    this.badge.fadeOut(500);
+                    return this;
+                },
+                show: function() {
+                    this.badge.fadeIn(500);
+                    return this;
+                }
+            }
+    // Adjust the navigation width when a scrollbar is displayed
+    function adjustNavigationWidth() {
+        let useragent = navigator.userAgent.toLowerCase();
+        if (useragent.indexOf('macintosh') == -1 && useragent.indexOf('iphone') == -1 && useragent.indexOf('ipad') == -1) {
+            let menu = document.getElementById('menu');
+            if (window.innerWidth > 768 && window.innerWidth < 1682) {
+                if (menu.scrollHeight == menu.offsetHeight) {
+                    menu.style.width = '64px';
+                } else {
+                    menu.style.width = '81px';
+                }
+            } else {
+                menu.style.width = '';
+            }
+        }
+    }
+
+    adjustNavigationWidth();
+
+    var pageBody = $('body');
+    var menuCheckbox = $('#menu-checkbox');
+    var menu = $('#menu');
+
+    // When resizing the window, call adjustNavigationWidth()
+    $(window).resize(function() {
+        resizeTimer = setTimeout(function() {
+            adjustNavigationWidth();
+        }, 250);
+    });
+
+    // Toggle menu when swipeleft
+    pageBody.on('swipeleft', function (e,touch) {
+        if(menuCheckbox.is(':checked')) {
+            menuCheckbox.prop('checked', false);
+            toggleMenu();
+        }
+    });
+
+    menuCheckbox.change(function() {
+        toggleMenu();
+    });
+
+    function toggleMenu() {
+        if(menuCheckbox.is(':checked')) {
+            pageBody.addClass('sidenav-active');
+            menu.trigger('opened.navigation');
+        } else {
+            pageBody.removeClass('sidenav-active');
+            menu.trigger('closed.navigation');
+        }
+    }
+
+    $('#menu .kv-toggle').click(function() {
+        menu.animate({
+            scrollTop: 300
+        }, 200);
+    });
+    function scrollToSmoothly(pos, time) {
+        var currentPos = window.pageYOffset;
+        var start = null;
+        if(time == null) time = 500;
+        pos = +pos, time = +time;
+        window.requestAnimationFrame(function step(currentTime) {
+            start = !start ? currentTime : start;
+            var progress = currentTime - start;
+            if (currentPos < pos) {
+                window.scrollTo(0, ((pos - currentPos) * progress / time) + currentPos);
+            } else {
+                window.scrollTo(0, currentPos - ((currentPos - pos) * progress / time));
+            }
+            if (progress < time) {
+                window.requestAnimationFrame(step);
+            } else {
+                window.scrollTo(0, pos);
+            }
+        });
+    }</script>
+<script>jQuery(function ($) {
+jQuery('#participation-modal').modal({"show":false});
+jQuery('#participation-form-modal').modal({"show":false});
+jQuery('#participations-modal').modal({"show":false});
+jQuery('#modal').modal({"show":false});
+        $('#modal').on('easyModal.load.complete', function () {
+            $('#download-button').on('click', function () {
+                $('#modal').modal('hide');
+            });
+        });
+
+    $(".maps_container").click(function () {
+        $(".maps_container iframe").css("pointer-events", "auto");
+    });
+
+    $(".maps_container").mouseleave(function() {
+        $(".maps_container iframe").css("pointer-events", "none");
+    });
+
+    dataLayerAttribsGlobal = {
+        'pageCategory': "/training/view",
+        'pageLanguage': "de",
+        'pageWidth': client.screenWidth,
+        'userAge': "28",
+        'userLogin': "1",
+        'userIsMinor': "0",
+        'userRoleAdmin': "1",
+        'teamSport': "handball",
+        'teamGender': "youth_boys",
+        'deviceMobile': client.mobile,
+        'deviceScreen': client.screen,
+        'deviceOrientation': client.orientation,
+        'deviceSystem': client.os,
+        'deviceSystemVersion': client.osVersion,
+        'deviceBrowser': client.browser,
+        'deviceBrowserVersion': client.browserMajorVersion,
+        'locationCountry': "",
+        'locationCity': "",
+        'locationZip': ""
+    }
+    dataLayerAttribsDynamic = ""
+    let dataLayerParameters = {...dataLayerAttribsGlobal, ...dataLayerAttribsDynamic};
+    AppHelper.adsTargeting(dataLayerParameters);
+jQuery('#event-center-modal').modal({"show":false});
+window.setTimeout(function() {
+                $('.alert-fade').fadeTo(1000, 0, function(){
+                    $(this).remove(); 
+                });
+            }, 5000);
+jQuery('#premium-required-modal').modal({"show":false});
+});</script> </body>
+</html>

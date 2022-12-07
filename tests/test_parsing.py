@@ -110,3 +110,11 @@ def test_parse_event_list_item_subtitle():
     actual = parsing.parse_event_list_items(html)
 
     assert actual == target
+
+
+def test_parse_event_year():
+    html = Path("tests/data/event.html").read_text("utf-8")
+
+    actual = parsing.parse_event_year(html)
+
+    assert actual == 2022

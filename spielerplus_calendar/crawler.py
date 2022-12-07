@@ -44,3 +44,10 @@ def fetch_event_calendar(server, identity: str, date: str = "2022-09-01") -> str
     cookies = dict(_identity=urllib.parse.quote(identity))
     response = requests.post(url, cookies=cookies, timeout=5)
     return response.text
+
+
+def fetch_event(server, identity: str, path: str) -> str:
+    url = f"{server}{path}"
+    cookies = dict(_identity=urllib.parse.quote(identity))
+    response = requests.post(url, cookies=cookies, timeout=5)
+    return response.text

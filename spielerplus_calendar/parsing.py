@@ -111,3 +111,11 @@ def _parse_meet(item: html.HtmlElement, begin: datetime) -> datetime:
     return datetime(
         datetime.today().year, begin.month, begin.day, meet_hour, meet_minutes
     )
+
+
+def parse_event_year(html_text: str) -> int:
+    dom = html.fromstring(html_text)
+    xpath = "//title"
+    title: str = typing.cast(html.HtmlElement, dom.xpath(xpath))[0].text
+    year = title[-4:]
+    return int(year)

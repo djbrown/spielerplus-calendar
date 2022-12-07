@@ -41,3 +41,13 @@ def from_event_list_item(item) -> Appointment:
         end=item["end"],
         url=item["url"],
     )
+
+
+def updated_year(app: Appointment, year: int) -> Appointment:
+    return Appointment(
+        id=app.id,
+        title=app.title,
+        start=app.start.replace(year=year),
+        end=app.end.replace(year=year),
+        url=app.url,
+    )

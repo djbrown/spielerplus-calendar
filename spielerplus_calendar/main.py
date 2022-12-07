@@ -11,9 +11,18 @@ def team_calendar(server: str, identity: str, team_name) -> str:
 
 
 def personal_calendar(server: str, identity: str, team_name) -> str:
-    html = crawler.fetch_event_list(server, identity)
-    items = parsing.parse_event_list_items(html)
+    event_list_html = crawler.fetch_event_list(server, identity)
+    items = parsing.parse_event_list_items(event_list_html)
     appointments = [appointment.from_event_list_item(item) for item in items]
+
+    event_htmls = [
+        crawler.fetch_event(server, identity, app.url) for app in appointments
+    ]
+    years = [parsing.parse_event_year(event_html) for event_html in event_htmls]
+    appointments = [
+        appointment.updated_year(app, year) for app, year in zip(appointments, years)
+    ]
+
     calendar = rendering.to_icalendar(appointments, team_name)
     return calendar.to_ical().decode("utf-8")
 
