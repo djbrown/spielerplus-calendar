@@ -118,3 +118,11 @@ def test_parse_event_year():
     actual = parsing.parse_event_year(html)
 
     assert actual == 2022
+
+
+def test_parse_description():
+    html = Path("tests/data/game.html").read_text("utf-8")
+
+    actual = parsing.parse_description(html)
+
+    assert actual == "Some description"

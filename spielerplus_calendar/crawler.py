@@ -22,6 +22,8 @@ def _fetch_event_list(server: str, identity: str, old: bool) -> str:
     count = 3 if old else 5
     offset = 0 if old else 5
 
+    print(f"{offset}{'-' if old else '+'}")
+
     while count > 0:
         url = f"{server}/events/ajaxgetevents"
         cookies = dict(_identity=urllib.parse.quote(identity))

@@ -19,8 +19,10 @@ def personal_calendar(server: str, identity: str, team_name) -> str:
         crawler.fetch_event(server, identity, app.url) for app in appointments
     ]
     years = [parsing.parse_event_year(event_html) for event_html in event_htmls]
+    descriptions = [parsing.parse_description(event_html) for event_html in event_htmls]
     appointments = [
-        appointment.updated_year(app, year) for app, year in zip(appointments, years)
+        appointment.updated(app, year, description)
+        for app, year, description in zip(appointments, years, descriptions)
     ]
 
     calendar = rendering.to_icalendar(appointments, team_name)

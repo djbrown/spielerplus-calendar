@@ -21,6 +21,7 @@ class Appointment(NamedTuple):
     start: datetime
     end: datetime
     url: str
+    description: str
 
 
 def from_calendar_item(item) -> Appointment:
@@ -30,6 +31,7 @@ def from_calendar_item(item) -> Appointment:
         start=parsing.parse_timestamp(item["start"]),
         end=parsing.parse_timestamp(item["end"]) - timedelta(days=1),
         url=item["url"],
+        description="",
     )
 
 
@@ -40,14 +42,16 @@ def from_event_list_item(item) -> Appointment:
         start=item["start"],
         end=item["end"],
         url=item["url"],
+        description="",
     )
 
 
-def updated_year(app: Appointment, year: int) -> Appointment:
+def updated(app: Appointment, year: int, description: str) -> Appointment:
     return Appointment(
         id=app.id,
         title=app.title,
         start=app.start.replace(year=year),
         end=app.end.replace(year=year),
         url=app.url,
+        description=description,
     )
