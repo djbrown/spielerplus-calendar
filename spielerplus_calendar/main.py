@@ -23,7 +23,9 @@ def personal_calendar(server: str, identity: str, team_name) -> str:
     addresses = [parsing.parse_address(event_html) for event_html in event_htmls]
     appointments = [
         appointment.updated(app, year, description, address)
-        for app, year, description, address in zip(appointments, years, descriptions, addresses)
+        for app, year, description, address in zip(
+            appointments, years, descriptions, addresses
+        )
     ]
 
     calendar = rendering.to_icalendar(appointments, team_name)
