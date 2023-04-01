@@ -129,3 +129,13 @@ def parse_description(html_text: str) -> str:
         return ""
     description: str = result[0].text
     return description.strip("\n„“")
+
+
+def parse_address(html_text: str) -> str:
+    dom = html.fromstring(html_text)
+    xpath = "//div[@class='info-area-content']/small"
+    result = typing.cast(html.HtmlElement, dom.xpath(xpath))
+    if not result:
+        return ""
+    description: str = result[0].text
+    return description.strip("\n„“")

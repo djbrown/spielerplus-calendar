@@ -11,6 +11,7 @@ def practice():
         end=datetime(2022, 9, 16, 20, 30),
         url="/training/view?id=12345",
         description="",
+        address="",
     )
 
 
@@ -23,6 +24,7 @@ def appointments():
             end=datetime(2022, 9, 30, 20, 30, 00),
             url="/training/view?id=11131",
             description="",
+            address="Street 0, 12345 Town, Country",
         ),
         appointment.Appointment(
             id="11132",
@@ -31,6 +33,7 @@ def appointments():
             end=datetime(2022, 7, 11, 20, 00, 00),
             url="/game/view?id=11132",
             description="",
+            address="",
         ),
         appointment.Appointment(
             id="11133",
@@ -39,6 +42,7 @@ def appointments():
             end=datetime(2022, 4, 24, 15, 30, 00),
             url="/event/view?id=11133",
             description="",
+            address="",
         ),
         appointment.Appointment(
             id="11134",
@@ -47,6 +51,7 @@ def appointments():
             end=datetime(2022, 7, 9, 23, 59, 59),
             url="/tournament/view?id=11134",
             description="",
+            address="",
         ),
     ]
 
@@ -60,6 +65,7 @@ def filtered_appointments():
             end=datetime(2022, 9, 5, 20, 00, 00),
             url="/training/view?id=11141",
             description="",
+            address="",
         ),
         appointment.Appointment(
             id="11142",
@@ -68,6 +74,7 @@ def filtered_appointments():
             end=datetime(2022, 9, 12, 20, 00, 00),
             url="/training/view?id=11142",
             description="",
+            address="",
         ),
         appointment.Appointment(
             id="11145",
@@ -76,6 +83,7 @@ def filtered_appointments():
             end=datetime(2022, 9, 19, 20, 00, 00),
             url="/training/view?id=11145",
             description="",
+            address="",
         ),
         appointment.Appointment(
             id="11146",
@@ -84,6 +92,7 @@ def filtered_appointments():
             end=datetime(2022, 9, 2, 20, 00, 00),
             url="/training/view?id=11146",
             description="",
+            address="",
         ),
         appointment.Appointment(
             id="11147",
@@ -92,6 +101,7 @@ def filtered_appointments():
             end=datetime(2022, 9, 9, 20, 00, 00),
             url="/training/view?id=11147",
             description="",
+            address="",
         ),
         appointment.Appointment(
             id="11148",
@@ -100,6 +110,7 @@ def filtered_appointments():
             end=datetime(2022, 9, 16, 20, 30, 00),
             url="/training/view?id=11148",
             description="",
+            address="",
         ),
         appointment.Appointment(
             id="11149",
@@ -108,6 +119,7 @@ def filtered_appointments():
             end=datetime(2022, 9, 23, 20, 30, 00),
             url="/training/view?id=11149",
             description="",
+            address="",
         ),
         appointment.Appointment(
             id="11131",
@@ -116,6 +128,7 @@ def filtered_appointments():
             end=datetime(2022, 9, 30, 20, 30, 00),
             url="/training/view?id=11131",
             description="",
+            address="",
         ),
         appointment.Appointment(
             id="11150",
@@ -124,6 +137,7 @@ def filtered_appointments():
             end=datetime(2022, 4, 27, 18, 30, 00),
             url="/game/view?id=11150",
             description="",
+            address="",
         ),
         appointment.Appointment(
             id="11132",
@@ -132,6 +146,7 @@ def filtered_appointments():
             end=datetime(2022, 7, 11, 20, 00, 00),
             url="/game/view?id=11132",
             description="",
+            address="",
         ),
         appointment.Appointment(
             id="11133",
@@ -140,6 +155,7 @@ def filtered_appointments():
             end=datetime(2022, 4, 24, 15, 30, 00),
             url="/event/view?id=11133",
             description="",
+            address="",
         ),
         appointment.Appointment(
             id="11151",
@@ -148,6 +164,7 @@ def filtered_appointments():
             end=datetime(2022, 5, 25, 23, 59, 59),
             url="/event/view?id=11151",
             description="",
+            address="",
         ),
         appointment.Appointment(
             id="11152",
@@ -156,6 +173,7 @@ def filtered_appointments():
             end=datetime(2022, 4, 30, 17, 00, 00),
             url="/tournament/view?id=11152",
             description="",
+            address="",
         ),
         appointment.Appointment(
             id="11134",
@@ -164,5 +182,6 @@ def filtered_appointments():
             end=datetime(2022, 7, 9, 23, 59, 59),
             url="/tournament/view?id=11134",
             description="",
+            address="",
         ),
     ]

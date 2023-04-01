@@ -126,3 +126,11 @@ def test_parse_description():
     actual = parsing.parse_description(html)
 
     assert actual == "Some description"
+
+
+def test_parse_address():
+    html = Path("tests/data/game.html").read_text("utf-8")
+
+    actual = parsing.parse_address(html)
+
+    assert actual == "Some address"

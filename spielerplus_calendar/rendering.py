@@ -30,6 +30,8 @@ def to_icalendar_event(appointment: Appointment, timestamp: datetime = None) -> 
     event.add("dtstamp", datetime.now() if timestamp is None else timestamp)
     if appointment.description:
         event.add("description", appointment.description)
+    if appointment.address:
+        event.add("location", appointment.address)
     event["uid"] = f"{appointment.id}"
 
     return event

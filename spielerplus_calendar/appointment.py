@@ -22,6 +22,7 @@ class Appointment(NamedTuple):
     end: datetime
     url: str
     description: str
+    address: str
 
 
 def from_calendar_item(item) -> Appointment:
@@ -32,6 +33,7 @@ def from_calendar_item(item) -> Appointment:
         end=parsing.parse_timestamp(item["end"]) - timedelta(days=1),
         url=item["url"],
         description="",
+        address="",
     )
 
 
@@ -43,10 +45,11 @@ def from_event_list_item(item) -> Appointment:
         end=item["end"],
         url=item["url"],
         description="",
+        address="",
     )
 
 
-def updated(app: Appointment, year: int, description: str) -> Appointment:
+def updated(app: Appointment, year: int, description: str, address: str) -> Appointment:
     return Appointment(
         id=app.id,
         title=app.title,
@@ -54,4 +57,5 @@ def updated(app: Appointment, year: int, description: str) -> Appointment:
         end=app.end.replace(year=year),
         url=app.url,
         description=description,
+        address=address,
     )

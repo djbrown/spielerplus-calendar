@@ -20,9 +20,10 @@ def personal_calendar(server: str, identity: str, team_name) -> str:
     ]
     years = [parsing.parse_event_year(event_html) for event_html in event_htmls]
     descriptions = [parsing.parse_description(event_html) for event_html in event_htmls]
+    addresses = [parsing.parse_address(event_html) for event_html in event_htmls]
     appointments = [
-        appointment.updated(app, year, description)
-        for app, year, description in zip(appointments, years, descriptions)
+        appointment.updated(app, year, description, address)
+        for app, year, description, address in zip(appointments, years, descriptions, addresses)
     ]
 
     calendar = rendering.to_icalendar(appointments, team_name)
