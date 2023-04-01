@@ -2,6 +2,8 @@
 
 Get ics calendar data for spielerplus team.
 
+[![CI Build](https://github.com/djbrown/spielerplus-calendar/actions/workflows/ci-build.yml/badge.svg)](https://github.com/djbrown/spielerplus-calendar/actions/workflows/ci-build.yml)
+
 ## Setup
 
 * vscode
