@@ -16,9 +16,13 @@ def personal_calendar(server: str, identity: str, team_name) -> str:
     appointments = [appointment.from_event_list_item(item) for item in items]
 
     event_htmls = []
+    print("Fetching event details", end="")
     for app in appointments:
+        print(".", flush=True, end="")
         html = crawler.fetch_event(server, identity, app.url)
         event_htmls.append(html)
+    print("\nDone")
+
     years = [parsing.parse_event_year(event_html) for event_html in event_htmls]
     descriptions = [parsing.parse_description(event_html) for event_html in event_htmls]
     addresses = [parsing.parse_address(event_html) for event_html in event_htmls]

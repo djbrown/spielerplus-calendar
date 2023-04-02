@@ -22,9 +22,10 @@ def _fetch_event_list(server: str, identity: str, old: bool) -> str:
     count = 3 if old else 5
     offset = 0 if old else 5
 
-    print(f"{offset}{'-' if old else '+'}")
+    print(f"Fetching {'old' if old else 'new'} events", end="")
 
     while count > 0:
+        print(".", flush=True, end="")
         url = f"{server}/events/ajaxgetevents"
         cookies = dict(_identity=urllib.parse.quote(identity))
         data: dict[str, int | str] = {"offset": offset}
@@ -37,6 +38,8 @@ def _fetch_event_list(server: str, identity: str, old: bool) -> str:
         all_html += json["html"]
         count = json["count"]
         offset += count
+
+    print("\nDone")
 
     return all_html
 
