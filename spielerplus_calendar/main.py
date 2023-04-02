@@ -15,9 +15,10 @@ def personal_calendar(server: str, identity: str, team_name) -> str:
     items = parsing.parse_event_list_items(event_list_html)
     appointments = [appointment.from_event_list_item(item) for item in items]
 
-    event_htmls = [
-        crawler.fetch_event(server, identity, app.url) for app in appointments
-    ]
+    event_htmls = []
+    for app in appointments:
+        html = crawler.fetch_event(server, identity, app.url)
+        event_htmls.append(html)
     years = [parsing.parse_event_year(event_html) for event_html in event_htmls]
     descriptions = [parsing.parse_description(event_html) for event_html in event_htmls]
     addresses = [parsing.parse_address(event_html) for event_html in event_htmls]
@@ -34,9 +35,10 @@ def personal_calendar(server: str, identity: str, team_name) -> str:
 
 def main():
     conf = config.from_file()
-    # ics = team_calendar(conf.server, conf.identity, conf.team_name)
-    ics = personal_calendar(conf.server, conf.identity, conf.team_name)
-    print(ics)
+    for team in conf.teams:
+        # ics = team_calendar(conf.server, conf.identity, conf.team_name)
+        ics = personal_calendar(conf.server, team.identity, team.name)
+        print(ics)
 
 
 if __name__ == "__main__":

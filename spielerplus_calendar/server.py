@@ -5,17 +5,19 @@ from spielerplus_calendar import config, main
 app = Flask(__name__)
 
 
-@app.route("/team/")
-def team_calendar_view():
+@app.route("/team/<team_id>/")
+def team_calendar_view(team_id=0):
     conf = config.from_file()
-    ics = main.team_calendar(conf.server, conf.identity, conf.team_name)
+    team = conf.teams[team_id]
+    ics = main.team_calendar(conf.server, team.identity, team.name)
     headers = {"content-disposition": 'attachment; filename="team.ics"'}
     return Response(ics, mimetype="text/calendar", headers=headers)
 
 
-@app.route("/personal/")
-def personal_calendar_view():
+@app.route("/personal/<team_id>/")
+def personal_calendar_view(team_id=0):
     conf = config.from_file()
-    ics = main.personal_calendar(conf.server, conf.identity, conf.team_name)
+    team = conf.teams[team_id]
+    ics = main.personal_calendar(conf.server, team.identity, team.name)
     headers = {"content-disposition": 'attachment; filename="personal.ics"'}
     return Response(ics, mimetype="text/calendar", headers=headers)
