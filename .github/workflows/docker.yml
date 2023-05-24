@@ -2,7 +2,7 @@ name: Docker
 
 on:
   push:
-    branches: [ AddDockerSupport ]
+    branches: [ main ]
 
 jobs:
   docker_buildx:
