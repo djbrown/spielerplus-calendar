@@ -3,6 +3,9 @@
 Get your [Spielerplus](https://www.spielerplus.de/) events in [ICS](https://en.wikipedia.org/wiki/ICalendar) format for calendar subscription.
 
 [![CI Build](https://github.com/djbrown/spielerplus-calendar/actions/workflows/ci-build.yml/badge.svg)](https://github.com/djbrown/spielerplus-calendar/actions/workflows/ci-build.yml)
+[![Docker](https://github.com/djbrown/spielerplus-calendar/actions/workflows/docker.yml/badge.svg)](https://github.com/djbrown/spielerplus-calendar/actions/workflows/docker.yml)
+[![Docker Image)](https://img.shields.io/docker/v/djbrown/spielerplus-calendar?label=Docker%20Image)](https://hub.docker.com/r/djbrown/spielerplus-calendar)
+
 
 ## Setup
 
@@ -10,6 +13,7 @@ Get your [Spielerplus](https://www.spielerplus.de/) events in [ICS](https://en.w
 * pyenv
 * python 3.10
 * poetry
+* docker
 
 ## Tools
 
@@ -30,8 +34,11 @@ For an example see [tests/data/config.json](https://github.com/djbrown/spielerpl
 
 ## Server
 
-Start a (development) server on `http://localhost:5000`:<br/>
-`poetry run flask --app spielerplus_calendar/server.py --debug run`<br/>
+Start a (development) server on `http://localhost:5000`:
+
+* via poetry: `poetry run flask --app spielerplus_calendar/server.py --debug run`
+* via docker: `docker run -p 5000:5000 -v $(pwd)/config.json:/app/config.json:ro djbrown/spielerplus-calendar`
+
 ⚠️ This is not suitable for production!
 
 Endpoints ([spielerplus-calendar/server.py](https://github.com/djbrown/spielerplus-calendar/blob/main/spielerplus-calendar/server.py)):
