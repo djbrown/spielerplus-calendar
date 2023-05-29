@@ -29,7 +29,7 @@ For an example see [tests/data/config.json](https://github.com/djbrown/spielerpl
 
 
 * `server`: base URL of the Spielerplus server e.g. `https://www.spielerplus.de`.
-* `team[].identity`: your personal `_identity` cookie on the Spielerplus server for the respective team. You can access the cookie value from the the browser settings or DevTools (e.g. [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html) or [Chrome](https://developer.chrome.com/docs/devtools/application/cookies/)).
+* `team[].identity`: your personal `_identity` cookie on the Spielerplus server for the respective team. You can access the cookie value from the the browser settings or DevTools (e.g. [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html) or [Chrome](https://developer.chrome.com/docs/devtools/application/cookies/)). ⚠️ Copying from Browser DevTools or pasting into an IDE might mix up the encoding. The value has to be encodet just at the inline double quotes to be a valid json string value. For an example see [tests/data/config.json](https://github.com/djbrown/spielerplus-calendar/blob/main/tests/data/config.json).
 * `team[].name`: can be chosen freely, as it is only used for naming the calendar.
 
 ## Server
