@@ -34,11 +34,11 @@ COPY poetry.lock pyproject.toml ./
 RUN poetry check
 
 # Install Dependencies
-RUN poetry install --no-interaction --no-cache --without dev
+RUN poetry install --no-interaction --no-cache --without dev --with prod
 
 # Copy Application
 COPY ./spielerplus_calendar ./spielerplus_calendar
 
 # Run Application
 EXPOSE 5000
-CMD [ "poetry", "run", "python", "-m", "flask", "--app=spielerplus_calendar/server.py", "run", "--host=0.0.0.0" ]
+CMD [ "poetry", "run", "gunicorn", "--bind", "0.0.0.0:5000", "--timeout", "300" "spielerplus_calendar.server:app" ]
