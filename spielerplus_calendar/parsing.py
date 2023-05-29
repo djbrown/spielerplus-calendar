@@ -37,7 +37,7 @@ def parse_event_list_items(html_text: str) -> list[dict]:
     for item in items:
         try:
             events.append(_parse_event_list_item(item))
-        except Exception as error:
+        except ValueError as error:
             print(f"Could not parse event list item:\n{error}", file=sys.stderr)
             traceback.print_exception(error)
             print(html.tostring(item), file=sys.stderr)
