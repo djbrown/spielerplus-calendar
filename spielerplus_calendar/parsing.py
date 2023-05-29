@@ -1,5 +1,7 @@
 import json
 import re
+import sys
+import traceback
 import typing
 from datetime import datetime, timedelta
 
@@ -31,7 +33,15 @@ def parse_event_list_items(html_text: str) -> list[dict]:
     )
     items = typing.cast(html.HtmlElement, dom.xpath(item_xpath))
 
-    return [_parse_event_list_item(item) for item in items]
+    events = []
+    for item in items:
+        try:
+            events.append(_parse_event_list_item(item))
+        except Exception as error:
+            print(f"Could not parse event list item:\n{error}", file=sys.stderr)
+            traceback.print_exception(error)
+            print(html.tostring(item), file=sys.stderr)
+    return events
 
 
 def _parse_event_list_item(item: html.HtmlElement) -> dict:
