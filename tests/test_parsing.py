@@ -135,6 +135,7 @@ def test_parse_address():
 
     assert actual == "Some address"
 
+
 def test_parse_year_from_multiday_event():
     html = Path("tests/data/event-multiday.html").read_text("utf-8")
 
