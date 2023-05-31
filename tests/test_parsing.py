@@ -134,3 +134,10 @@ def test_parse_address():
     actual = parsing.parse_address(html)
 
     assert actual == "Some address"
+
+def test_parse_year_from_multiday_event():
+    html = Path("tests/data/event-multiday.html").read_text("utf-8")
+
+    actual = parsing.parse_event_year(html)
+
+    assert actual == 2023

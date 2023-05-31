@@ -127,8 +127,8 @@ def parse_event_year(html_text: str) -> int:
     dom = html.fromstring(html_text)
     xpath = "//title"
     title: str = typing.cast(html.HtmlElement, dom.xpath(xpath))[0].text
-    year = title[-4:]
-    return int(year)
+    year = title[-2:]
+    return 2000 + int(year)
 
 
 def parse_description(html_text: str) -> str:
