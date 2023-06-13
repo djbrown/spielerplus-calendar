@@ -6,7 +6,7 @@ from spielerplus_calendar.appointment import Appointment
 
 
 def to_icalendar(
-    appointments: list[Appointment], team_name, timestamp: datetime = None
+    appointments: list[Appointment], team_name, server, timestamp: datetime = None
 ) -> Calendar:
     calendar = Calendar()
     calendar.add("PRODID", "-//SpielerPlus//Terminkalender 1.0//DE")
@@ -17,19 +17,23 @@ def to_icalendar(
     calendar.add("X-WR-TIMEZONE", "Europe/Berlin")
     calendar.add("X-WR-CALDESC", f'SpielerPlus Termine "{team_name}"')
     for appointment in appointments:
-        event = to_icalendar_event(appointment, timestamp)
+        event = to_icalendar_event(appointment, server, timestamp)
         calendar.add_component(event)
     return calendar
 
 
-def to_icalendar_event(appointment: Appointment, timestamp: datetime = None) -> Event:
+def to_icalendar_event(
+    appointment: Appointment, server: str, timestamp: datetime = None
+) -> Event:
     event = Event()
     event.add("summary", appointment.title)
     event.add("dtstart", appointment.start)
     event.add("dtend", appointment.end)
     event.add("dtstamp", datetime.now() if timestamp is None else timestamp)
+    description = f'<a href="{server + appointment.url}">{server + appointment.url}</a>'
     if appointment.description:
-        event.add("description", appointment.description)
+        description += f"<br />{appointment.description}"
+    event.add("description", description)
     if appointment.address:
         event.add("location", appointment.address)
     event["uid"] = f"{appointment.id}"

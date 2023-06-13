@@ -10,7 +10,9 @@ def test_to_calendar():
     appointments = fixtures.appointments()
 
     timestamp = datetime(2022, 9, 29, 4, 7, 57)
-    cal = rendering.to_icalendar(appointments, "HSG Blau-Weiß 22/23", timestamp)
+    cal = rendering.to_icalendar(
+        appointments, "HSG Blau-Weiß 22/23", "http://myserver.tld", timestamp
+    )
     actual = cal.to_ical().decode().replace("\r\n", "\n")
 
     target = Path("tests/data/event-calendar.ics").read_text("utf-8")
@@ -29,9 +31,15 @@ def test_to_calendar_event():
         "DTEND;VALUE=DATE-TIME:20220916T203000\r\n"
         "DTSTAMP;VALUE=DATE-TIME:" + timestamp.strftime("%Y%m%dT%H%M%S") + "Z\r\n"
         "UID:12345\r\n"
+        'DESCRIPTION:<a href="http://myserver.tld/training/view?id=12345">http://my\r\n'
+        " server.tld/training/view?id=12345</a><br />some description\r\n"
         "END:VEVENT\r\n"
     )
 
-    actual = rendering.to_icalendar_event(app, timestamp).to_ical().decode()
+    actual = (
+        rendering.to_icalendar_event(app, "http://myserver.tld", timestamp)
+        .to_ical()
+        .decode()
+    )
 
     assert actual == target
