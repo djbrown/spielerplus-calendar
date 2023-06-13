@@ -31,8 +31,8 @@ def test_to_calendar_event():
         "DTEND;VALUE=DATE-TIME:20220916T203000\r\n"
         "DTSTAMP;VALUE=DATE-TIME:" + timestamp.strftime("%Y%m%dT%H%M%S") + "Z\r\n"
         "UID:12345\r\n"
-        'DESCRIPTION:<a href="http://myserver.tld/training/view?id=12345">http://my\r\n'
-        " server.tld/training/view?id=12345</a><br />some description\r\n"
+        "DESCRIPTION:http://myserver.tld/training/view?id=12345\\nthis is my descrip\r\n"
+        " tion\r\n"
         "END:VEVENT\r\n"
     )
 

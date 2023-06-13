@@ -30,12 +30,15 @@ def to_icalendar_event(
     event.add("dtstart", appointment.start)
     event.add("dtend", appointment.end)
     event.add("dtstamp", datetime.now() if timestamp is None else timestamp)
-    description = f'<a href="{server + appointment.url}">{server + appointment.url}</a>'
+
+    description = server + appointment.url
     if appointment.description:
-        description += f"<br />{appointment.description}"
+        description += f"\n{appointment.description}"
     event.add("description", description)
+
     if appointment.address:
         event.add("location", appointment.address)
+
     event["uid"] = f"{appointment.id}"
 
     return event

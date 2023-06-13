@@ -10,7 +10,7 @@ def practice():
         start=datetime(2022, 9, 16, 18, 40),
         end=datetime(2022, 9, 16, 20, 30),
         url="/training/view?id=12345",
-        description="some description",
+        description="this is my description",
         address="",
     )
 
@@ -23,7 +23,7 @@ def appointments():
             start=datetime(2022, 9, 30, 18, 55, 00),
             end=datetime(2022, 9, 30, 20, 30, 00),
             url="/training/view?id=11131",
-            description="my description",
+            description="this is my description",
             address="Street 0, 12345 Town, Country",
         ),
         appointment.Appointment(
