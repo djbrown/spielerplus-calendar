@@ -120,6 +120,14 @@ def test_parse_event_year():
     assert actual == 2022
 
 
+def test_parse_year_from_multiday_event():
+    html = Path("tests/data/event-multiday.html").read_text("utf-8")
+
+    actual = parsing.parse_event_year(html)
+
+    assert actual == 2023
+
+
 def test_parse_description():
     html = Path("tests/data/game.html").read_text("utf-8")
 
@@ -128,17 +136,25 @@ def test_parse_description():
     assert actual == "Some description"
 
 
+def test_parse_long_description():
+    html = Path("tests/data/game-long-desc.html").read_text("utf-8")
+
+    actual = parsing.parse_description(html)
+    target = "This is the first line\nanother line & special char\nsome time 12:00 end"
+    assert actual == target
+
+
+def test_parse_no_description():
+    html = Path("tests/data/event.html").read_text("utf-8")
+
+    actual = parsing.parse_description(html)
+
+    assert actual == ""
+
+
 def test_parse_address():
     html = Path("tests/data/game.html").read_text("utf-8")
 
     actual = parsing.parse_address(html)
 
     assert actual == "Some address"
-
-
-def test_parse_year_from_multiday_event():
-    html = Path("tests/data/event-multiday.html").read_text("utf-8")
-
-    actual = parsing.parse_event_year(html)
-
-    assert actual == 2023

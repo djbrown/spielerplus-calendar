@@ -133,11 +133,9 @@ def parse_event_year(html_text: str) -> int:
 
 def parse_description(html_text: str) -> str:
     dom = html.fromstring(html_text)
-    xpath = "//div[@class='event-description']/p[@class='text-center']"
-    result = typing.cast(html.HtmlElement, dom.xpath(xpath))
-    if not result:
-        return ""
-    description: str = result[0].text
+    xpath = "//div[@class='event-description']/p/text()"
+    lines: list[str] = typing.cast(list[str], dom.xpath(xpath))
+    description = "".join(lines)
     return description.strip("\n„“")
 
 
