@@ -1,8 +1,11 @@
 from datetime import datetime
 
+import pytz
 from icalendar import Calendar, Event
 
 from spielerplus_calendar.appointment import Appointment
+
+tz = pytz.timezone("Europe/Berlin")
 
 
 def to_icalendar(
@@ -27,9 +30,11 @@ def to_icalendar_event(
 ) -> Event:
     event = Event()
     event.add("summary", appointment.title)
-    event.add("dtstart", appointment.start)
-    event.add("dtend", appointment.end)
-    event.add("dtstamp", datetime.now() if timestamp is None else timestamp)
+    event.add("dtstart", tz.localize(appointment.start))
+    event.add("dtend", tz.localize(appointment.end))
+
+    now = datetime.now() if timestamp is None else timestamp
+    event.add("dtstamp", tz.localize(now))
 
     description = server + appointment.url
     if appointment.description:
