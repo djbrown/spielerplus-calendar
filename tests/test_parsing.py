@@ -112,6 +112,15 @@ def test_parse_event_list_item_subtitle():
     assert actual == target
 
 
+def test_parse_end_from_multiday_event_list_item():
+    html = Path("tests/data/event-list-item-multiday.html").read_text("utf-8")
+
+    begin = parsing.parse_begin(html)
+    actual = parsing.parse_end(html, begin)
+
+    assert actual == datetime(datetime.today().year, 6, 18, 11, 0)
+
+
 def test_parse_event_year():
     html = Path("tests/data/event.html").read_text("utf-8")
 

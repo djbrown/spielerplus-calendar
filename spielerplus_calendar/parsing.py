@@ -66,6 +66,11 @@ def _parse_event_list_item(item: html.HtmlElement) -> dict:
     return {"id": event_id, "title": title, "start": meet, "end": end, "url": url}
 
 
+def parse_begin(html_text: str) -> datetime:
+    dom = html.fromstring(html_text)
+    return _parse_begin(dom)
+
+
 def _parse_begin(item: html.HtmlElement) -> datetime:
     begin_date_xpath = (
         ".//div[@class='panel-heading-info']/div[@class='panel-subtitle']"
@@ -89,6 +94,11 @@ def _parse_begin(item: html.HtmlElement) -> datetime:
     )
 
 
+def parse_end(html_text: str, begin: datetime) -> datetime:
+    dom = html.fromstring(html_text)
+    return _parse_end(dom, begin)
+
+
 def _parse_end(item: html.HtmlElement, begin: datetime) -> datetime:
     end_time_xpath = (
         ".//div[@class='event-time-item'"
@@ -96,14 +106,24 @@ def _parse_end(item: html.HtmlElement, begin: datetime) -> datetime:
         "/div[@class='event-time-value']"
     )
     end_time_text: str = item.xpath(end_time_xpath)[0].text
+
     if end_time_text == "-:-":
         return begin + timedelta(minutes=90)
 
+    if " am " in end_time_text:
+        pattern = r"(\d\d):(\d\d) am (\d\d)\.(\d\d)\."
+        result: re.Match[str] | None = re.match(pattern, end_time_text)
+        if result is None:
+            raise Exception("Could not parse end of multiday event")
+        hour = int(result.group(1))
+        minute = int(result.group(2))
+        day = int(result.group(3))
+        month = int(result.group(4))
+        return begin.replace(month=month, day=day, hour=hour, minute=minute)
+
     (end_hour_text, end_minutes_text) = end_time_text.split(":")
     (end_hour, end_minutes) = (int(end_hour_text), int(end_minutes_text))
-    return datetime(
-        datetime.today().year, begin.month, begin.day, end_hour, end_minutes
-    )
+    return begin.replace(hour=end_hour, minute=end_minutes)
 
 
 def _parse_meet(item: html.HtmlElement, begin: datetime) -> datetime:
