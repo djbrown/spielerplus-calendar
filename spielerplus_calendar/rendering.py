@@ -38,10 +38,10 @@ def to_icalendar_event(
 
     description = server + appointment.url
     if appointment.description:
-        description += f"\n{appointment.description}"
+        description = f"{appointment.description}\n\n{description}"
     event.add("description", description)
 
-    if appointment.address:
+    if appointment.address and "keine adresse" not in appointment.address.lower():
         event.add("location", appointment.address)
 
     event["uid"] = f"{appointment.id}"
