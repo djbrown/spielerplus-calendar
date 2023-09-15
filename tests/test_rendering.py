@@ -35,8 +35,8 @@ def test_to_calendar_event():
         "DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20220916T203000\r\n"
         "DTSTAMP;VALUE=DATE-TIME:20230707T160942Z\r\n"
         "UID:12345\r\n"
-        "DESCRIPTION:http://myserver.tld/training/view?id=12345\\nthis is my descrip\r\n"
-        " tion\r\n"
+        "DESCRIPTION:this is my description\\n\\nhttp://myserver.tld/training/view?id\r\n"
+        " =12345\r\n"
         "END:VEVENT\r\n"
     )
 

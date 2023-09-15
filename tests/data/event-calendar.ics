@@ -12,8 +12,8 @@ DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20220930T185500
 DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20220930T203000
 DTSTAMP;VALUE=DATE-TIME:20220929T020757Z
 UID:11131
-DESCRIPTION:http://myserver.tld/training/view?id=11131\nthis is my descrip
- tion
+DESCRIPTION:this is my description\n\nhttp://myserver.tld/training/view?id
+ =11131
 LOCATION:Street 0\, 12345 Town\, Country
 END:VEVENT
 BEGIN:VEVENT
