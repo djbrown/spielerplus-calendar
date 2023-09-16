@@ -166,4 +166,7 @@ def parse_address(html_text: str) -> str:
     if not result:
         return ""
     description: str = result[0].text
-    return description.strip("\n„“")
+    address = description.strip("\n„“")
+    if "keine adresse" in address.lower():
+        return ""
+    return address

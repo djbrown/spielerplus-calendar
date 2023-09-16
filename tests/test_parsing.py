@@ -167,3 +167,11 @@ def test_parse_address():
     actual = parsing.parse_address(html)
 
     assert actual == "Some address"
+
+
+def test_parse_no_address():
+    html = Path("tests/data/event-no-address.html").read_text("utf-8")
+
+    actual = parsing.parse_address(html)
+
+    assert actual == ""
