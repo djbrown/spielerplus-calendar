@@ -112,6 +112,14 @@ def test_parse_event_list_item_subtitle():
     assert actual == target
 
 
+def test_parse_canceled_event_list_item():
+    html = Path("tests/data/event-list-item-canceled.html").read_text("utf-8")
+
+    actual = parsing.parse_event_list_items(html)
+
+    assert not actual
+
+
 def test_parse_end_from_multiday_event_list_item():
     html = Path("tests/data/event-list-item-multiday.html").read_text("utf-8")
 

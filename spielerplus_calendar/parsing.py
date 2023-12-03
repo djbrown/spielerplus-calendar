@@ -26,11 +26,13 @@ def parse_timestamp(timestamp: str) -> datetime:
 
 def parse_event_list_items(html_text: str) -> list[dict]:
     dom = html.fromstring(html_text)
-    item_xpath = (
-        "//div[@class='list event'"
-        " and .//button[@class='participation-button selected'"
-        " and @title = 'Zugesagt']]"
-    )
+    item_xpath = """
+//div[
+    @class='list event'
+    and .//button[@class='participation-button selected' and @title = 'Zugesagt']
+    and not(.//div[@class='panel-drilldown-badge' and text()='Abgesagt'])
+]
+"""
     items = typing.cast(html.HtmlElement, dom.xpath(item_xpath))
 
     events = []
