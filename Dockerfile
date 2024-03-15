@@ -41,4 +41,5 @@ COPY ./spielerplus_calendar ./spielerplus_calendar
 
 # Run Application
 EXPOSE 5000
-CMD [ "poetry", "run", "gunicorn", "--bind", "0.0.0.0:5000", "--workers", "4", "--timeout", "600", "spielerplus_calendar.server:app" ]
+ENV SERVER_TIMEOUT=300
+CMD poetry run gunicorn --bind 0.0.0.0:5000 --workers 4 --timeout $SERVER_TIMEOUT spielerplus_calendar.server:app
