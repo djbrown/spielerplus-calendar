@@ -53,3 +53,4 @@ Generates ICS output for custom postprocessing:<br/>
 Starts a production ready server in a docker container:<br/>
 `docker run -p 5000:5000 -v $(pwd)/config.json:/app/config.json:ro djbrown/spielerplus-calendar`
 The server will be reachable under port `5000` on all public ip addresses of your machine.
+You may optionally change the default server timeout (300s) e.g: `-e SERVER_TIMEOUT=600`.
